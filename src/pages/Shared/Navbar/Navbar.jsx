@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import logo from '../../../assets/images/Logos/toy-store.png'
 import { FaSearch, FaShoppingBag, FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
-// import { authContext } from "../../../providers/AuthProviders";
+import { authContext } from "../../../providers/AuthProviders";
 
 
 const Navbar = () => {
 
-    // const { user, logOut } = useContext(authContext);
+    const { user, logOut } = useContext(authContext);
 
     const handleLogOut = () => {
         logOut()
@@ -18,25 +18,25 @@ const Navbar = () => {
 
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/appoinment'>Services</Link></li>
-
-        
-            
-                <li><Link to='/appoinment'>My Appoinment</Link></li>
-                
+        <li><Link to='/appoinment'>All Toys</Link></li>
+        {
+            user?.email ? <>
+                <li><Link to='/appoinment'>My Toys</Link></li>
+                <li><Link to="/admin/dashboard">Add A Toy</Link></li>
                 <li><button onClick={handleLogOut}>Log out</button></li>
-
-            
-                
+            </>
+                :
                 <li><Link to='/login'>Login</Link></li>
+        }
         
+        <li><Link to='/appoinment'>Blogs</Link></li>
 
     </>
 
 
     return (
         <div>
-            <div className="navbar h-18 mb-4 px-2 md:px-12 z-10 relative">
+            <div className="navbar h-18 mb-4 px-2 md:px-16 z-10 relative">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,10 +59,10 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end md:mr-16">
-                    <FaSearch className= "text-2xl"></FaSearch>
-                    <FaUserCircle className= "ml-4 text-2xl"></FaUserCircle>
-                    <FaShoppingBag className= "ml-4 text-2xl"></FaShoppingBag>
+                <div className="navbar-end">
+                    <FaSearch className="text-2xl"></FaSearch>
+                    <FaUserCircle className="ml-4 text-2xl"></FaUserCircle>
+                    <FaShoppingBag className="ml-4 text-2xl"></FaShoppingBag>
                 </div>
             </div>
         </div>

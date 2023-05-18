@@ -11,14 +11,14 @@ const Banner = () => {
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={img1} className="w-full rounded-3xl" />
 
-                    <div className="absolute flex items-center left-0 top-0 bg-gradient-to-r from-[#03bfa64a] to-[#03bfa64a] h-full w-full rounded-3xl">
+                    <div className="absolute flex items-center left-0 top-0 bg-gradient-to-r from-[#00000092] to-[#0000004a] h-full w-full rounded-3xl">
 
                         <div className='text-white w-full text-center'>
                             <h3 className='md:text-xl font-bold mb-6'>Markets & Resource</h3>
                             <h2 className='text-2xl md:text-7xl  font-bold mb-28'>Find The Best <br />Doctor Near By You.</h2>
                             <div>
-                                <button className="text-white btn bg-[#09c3d0] border-[#09c3d0] mr-5 rounded-3xl">Shop Now<FaPlus className='ml-3'></FaPlus> </button>
-                                <button className="btn text-white btn-outline border-[#FFFFFF]">READ MORE <FaPlus className='ml-3'></FaPlus></button>
+                                <button className="text-white btn bg-[#03BFA7] border-[#03BFA7] mr-5 rounded-3xl">Shop Now<FaPlus className='ml-3'></FaPlus> </button>
+                                <button className="btn text-white btn-outline border-[#FFFFFF] rounded-3xl">READ MORE <FaPlus className='ml-3'></FaPlus></button>
 
                             </div>
                         </div>
