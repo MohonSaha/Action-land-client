@@ -23,13 +23,17 @@ const Navbar = () => {
             user?.email ? <>
                 <li><Link to='/appoinment'>My Toys</Link></li>
                 <li><Link to="/admin/dashboard">Add A Toy</Link></li>
+                <li><Link to='/appoinment'>Blogs</Link></li>
                 <li><button onClick={handleLogOut}>Log out</button></li>
             </>
                 :
+                <>
+                <li><Link to='/appoinment'>Blogs</Link></li>
                 <li><Link to='/login'>Login</Link></li>
+                </>
         }
+
         
-        <li><Link to='/appoinment'>Blogs</Link></li>
 
     </>
 

@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
 import img from '../../../assets/images/Logos/login.jpg'
 import { FaGoogle } from 'react-icons/fa';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { authContext } from '../../../providers/AuthProviders';
 
 
 const Login = () => {
 
     const {signIn, user, signInWithGoogle} = useContext(authContext);
+    const [error, setError] = useState('');
 
     const handleLogin = event =>{
         event.preventDefault();
+        setError('')
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
@@ -21,14 +23,16 @@ const Login = () => {
             const user = result.user;
             console.log(user);
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            setError(error.message)
+        })
 
     }
 
 
     // Handle Google signIn: 
     const handleGoogleSignIn = () =>{
-        // setError('');
+        setError('');
         
         signInWithGoogle()
         .then(result=>{
@@ -67,8 +71,12 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
 
+                            <p className="text-red-500 text-center mt-4 font-semibold">
+                                {error}
+                            </p>
+
+                            <div className="form-control mt-6">
                                 <input type="submit" className='btn text-white bg-[#09917f] border-[#09917f]' value="Sign In" />
                             </div>
                         </form>
