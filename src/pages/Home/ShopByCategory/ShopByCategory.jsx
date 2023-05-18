@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import CategoryToyCard from '../CategoryToyCard/CategoryToyCard';
 
 const ShopByCategory = () => {
     const [selectedTab, setSelectedTab] = useState(0);
@@ -11,18 +12,17 @@ const ShopByCategory = () => {
         setSelectedTab(index);
     };
 
-    console.log(selectedTab, activeTab);
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
-      };
+    };
 
     useEffect(() => {
         fetch(`http://localhost:5000/allToys/${activeTab}`)
-        .then(res => res.json())
-        .then(data =>{
-            setToys(data)
-        })
+            .then(res => res.json())
+            .then(data => {
+                setToys(data)
+            })
     }, [activeTab])
 
 
@@ -57,18 +57,48 @@ const ShopByCategory = () => {
                     </Tab>
                 </TabList>
 
-                <TabPanel>
-                    <h2>Category 1 Content</h2>
-                    {/* Add your content for Category 1 here */}
+
+
+                <TabPanel className="mt-12">
+
+                    <div className="flex gap-12">
+                        {
+                            toys.map(toy => <CategoryToyCard
+                                toy={toy}
+                                key={toy._id}
+                            ></CategoryToyCard>)
+                        }
+                    </div>
                 </TabPanel>
+
                 <TabPanel>
-                    <h2>Category 2 Content</h2>
-                    {/* Add your content for Category 2 here */}
+
+                    <div className="flex gap-12">
+                        {
+                            toys.map(toy => <CategoryToyCard
+                                toy={toy}
+                                key={toy._id}
+                            ></CategoryToyCard>)
+                        }
+                    </div>
                 </TabPanel>
+
                 <TabPanel>
-                    <h2>Category 3 Content</h2>
-                    {/* Add your content for Category 3 here */}
+
+                    <div className="flex gap-12">
+                        {
+                            toys.map(toy => <CategoryToyCard
+                                toy={toy}
+                                key={toy._id}
+                            ></CategoryToyCard>)
+                        }
+                    </div>
                 </TabPanel>
+
+
+
+
+
             </Tabs>
         </div>
     );
