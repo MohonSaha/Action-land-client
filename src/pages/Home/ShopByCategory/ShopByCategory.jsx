@@ -6,7 +6,7 @@ import { FaTag, FaTags, FaUserTag } from 'react-icons/fa';
 
 const ShopByCategory = () => {
     const [selectedTab, setSelectedTab] = useState(0);
-    const [activeTab, setActiveTab] = useState("Unicorn")
+    const [activeTab, setActiveTab] = useState("Marvel")
     const [toys, setToys] = useState([])
 
     const handleTabSelect = (index) => {
@@ -33,7 +33,7 @@ const ShopByCategory = () => {
     return (
 
 
-        <div className=''>
+        <div className='-mt-12'>
             <div className='mb-6 text-center '>
                 <h3 className='text-xl text-[#03BFA7] font-semibold'> Shop By Category</h3 >
                 <h1 className='text-5xl font-bold'>Trending Toy Categoryes</h1>
@@ -48,26 +48,26 @@ const ShopByCategory = () => {
                 <Tabs className=" " selectedIndex={selectedTab} onSelect={handleTabSelect}>
                     <TabList className="flex justify-center space-x-12">
                         <Tab
-                            onClick={() => handleTabClick("Unicorn")}
+                            onClick={() => handleTabClick("Marvel")}
                             selectedClassName="custom-active-btn"
                             className='px-4 py-2 custom-btn-outline'
                         >
-                            Unicorn
+                            Marvel
                         </Tab>
                         <Tab
-                            onClick={() => handleTabClick("Teddy-bear")}
+                            onClick={() => handleTabClick("Star-wars")}
                             selectedClassName="custom-active-btn"
                             className='px-4 py-2 custom-btn-outline'
                         >
-                            Teddy Bear
+                            Star-wars
                         </Tab>
 
                         <Tab
-                            onClick={() => handleTabClick("Dinosaur")}
+                            onClick={() => handleTabClick("Transformers")}
                             selectedClassName="custom-active-btn"
                             className='px-4 py-2 custom-btn-outline'
                         >
-                            Dinosaur
+                            Transformers
                         </Tab>
                     </TabList>
 
@@ -75,7 +75,7 @@ const ShopByCategory = () => {
 
                     <TabPanel className="mt-12">
 
-                        <div className="flex gap-12">
+                        <div className="flex gap-6">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}
