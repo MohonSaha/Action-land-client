@@ -4,34 +4,44 @@ import Home from "../pages/Home/Home/Home";
 import Login from "../pages/UserAuth/Login/Login";
 import SignUp from "../pages/UserAuth/Signup/Signup";
 import AllToys from "../pages/AllToys/AllToys";
+import SingleToyDetails from "../pages/SingleToyDetails/SingleToyDetails";
+import AddAToy from "../pages/AddAToy/AddAToy";
 
 
 
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element: <MainLayout></MainLayout>,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-            path: '/allToys',
-            element: <AllToys></AllToys>
-        },
-        {
-            path: '/login',
-            element: <Login></Login>
-        },
-        {
-            path: '/signup',
-            element: <SignUp></SignUp>
-        }
-      ]
+        path: "/",
+        element: <MainLayout></MainLayout>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            },
+            {
+                path: '/allToys',
+                element: <AllToys></AllToys>
+            },
+            {
+                path: '/addToy',
+                element: <AddAToy></AddAToy>
+            },
+            {
+                path: '/toyDetails/:id',
+                element: <SingleToyDetails></SingleToyDetails>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <SignUp></SignUp>
+            }
+        ]
     },
-  ]);
+]);
 
 
-  export default router;
+export default router;
