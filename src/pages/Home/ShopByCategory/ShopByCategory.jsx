@@ -87,7 +87,7 @@ const ShopByCategory = () => {
 
                     <TabPanel>
 
-                        <div className="flex gap-12">
+                        <div className="flex gap-6">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}
@@ -99,7 +99,7 @@ const ShopByCategory = () => {
 
                     <TabPanel>
 
-                        <div className="flex gap-12">
+                        <div className="flex gap-6">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}

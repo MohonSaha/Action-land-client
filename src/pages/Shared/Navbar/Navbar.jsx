@@ -3,6 +3,7 @@ import logo from '../../../assets/images/Logos/toy-store.png'
 import { FaSearch, FaShoppingBag, FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { authContext } from "../../../providers/AuthProviders";
+import profile from '../../../assets/images/Logos/profile-user.png'
 
 
 const Navbar = () => {
@@ -20,15 +21,15 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allToys'>All Toys</Link></li>
         {
-            user?.email ? <>
-                <li><Link to='/appoinment'>My Toys</Link></li>
+            user? <>
+                <li><Link to='/myToys'>My Toys</Link></li>
                 <li><Link to="/addToy">Add A Toy</Link></li>
                 <li><Link to='/blogs'>Blogs</Link></li>
                 <li><button onClick={handleLogOut}>Log out</button></li>
             </>
                 :
                 <>
-                <li><Link to='/appoinment'>Blogs</Link></li>
+                <li><Link to='/blogs'>Blogs</Link></li>
                 <li><Link to='/login'>Login</Link></li>
                 </>
         }
@@ -56,7 +57,7 @@ const Navbar = () => {
                         <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-2xl font-bold font-serif md:ml-4 ml-2"><span className="text-[#03BFA7]">Zoo</span><span className="text-[#fa7092]">Land</span></span>
                     </Link>
                 </div>
-                <div className="navbar-center lg:ml-40  hidden lg:flex">
+                <div className="navbar-center  hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-lg font-semibold">
 
                         {navItems}
@@ -64,9 +65,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <FaSearch className="text-2xl"></FaSearch>
-                    <FaUserCircle className="ml-4 text-2xl"></FaUserCircle>
-                    <FaShoppingBag className="ml-4 text-2xl"></FaShoppingBag>
+                    <FaSearch className="ml-4 border-2 border-slate-500 border-dashed p-2 rounded-full w-10 h-10 text-sm"></FaSearch>
+                    <FaShoppingBag className="ml-4 border-2 border-slate-500 border-dashed p-2 rounded-full w-10 h-10 text-sm"></FaShoppingBag>
+                    <div className="badge badge-md bg-[#fa7092] relative -top-3 -left-3 border-none text-white">0</div>
+                    {
+                       <img className="h-11 w-11 rounded-full hover:scale-105 border-2 border-slate-500 border-dashed p-1 transition-all duration-700" src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                    }
+                    
                 </div>
             </div>
         </div>
