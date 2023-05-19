@@ -4,14 +4,14 @@ import ShopByCategory from '../ShopByCategory/ShopByCategory';
 import WhyChoose from '../WhyChoose/WhyChoose';
 import Subscribe from '../Subscribe/Subscribe';
 import TrendyCollection from '../TrendyCollection/TrendyCollection';
-import ToyCategoryTabs from '../ToyCategory/ToyCategoryTabs';
+import ToyGallary from '../ToyGallary/ToyGallary';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <TrendyCollection></TrendyCollection>
-            {/* <ToyCategoryTabs></ToyCategoryTabs> */}
+            <ToyGallary></ToyGallary>
             <ShopByCategory></ShopByCategory>
             <WhyChoose></WhyChoose>
             <Subscribe></Subscribe>
