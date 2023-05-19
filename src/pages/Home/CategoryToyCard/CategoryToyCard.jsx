@@ -1,18 +1,26 @@
 import React, { useCallback, useContext } from 'react';
 import { authContext } from '../../../providers/AuthProviders';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const CategoryToyCard = ({ toy }) => {
     console.log(toy);
 
-    const {name, photo, price, details, quantity, rating, _id} = toy;
-    const {user} = useContext(authContext)
+    const { name, photo, price, details, quantity, rating, _id } = toy;
+    const { user } = useContext(authContext)
     const navigate = useNavigate()
 
-    const handleViewDetails = (id) =>{
-        if(!user){
-            navigate('/login')
+    const handleViewDetails = (id) => {
+        if (!user) {
+            // navigate('/login')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You have to log in first to view details!',
+            })
         }
+
+        navigate(`/toyDetails/${toy._id}`)
     }
 
 
@@ -30,8 +38,8 @@ const CategoryToyCard = ({ toy }) => {
                         <p>Rating: {rating}</p>
                     </span>
 
-                    <div onClick={()=> handleViewDetails(_id)} className="card-actions justify-end">
-                        <button className="custom-primary-btn">View Details </button>
+                    <div className="card-actions justify-end">
+                        <button onClick={() => handleViewDetails(_id)} className="custom-primary-btn">View Details</button>
                     </div>
                 </div>
             </div>

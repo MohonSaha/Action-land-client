@@ -8,7 +8,7 @@ const AllToys = () => {
     const { user } = useContext(authContext)
     const [toys, setToys] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allToys')
+        fetch('http://localhost:5000/showToys')
             .then(res => res.json())
             .then(data => {
                 setToys(data)
@@ -19,8 +19,12 @@ const AllToys = () => {
 
     return (
         <div>
-            <div className="overflow-x-auto mt-20 md:mx-24">
-                <table className="table w-full">
+            <div className="overflow-x-auto mt-16 md:mx-24">
+                <div className='text-center mb-8'>
+                    <h3 className='text-xl text-[#03BFA7] font-semibold'>All Toys</h3>
+                    <h1 className='text-5xl font-bold'>Total Posted Toys</h1>
+                </div>
+                <table className="table w-full  my-table">
                     {/* head */}
                     <thead>
                         <tr>
@@ -40,7 +44,7 @@ const AllToys = () => {
                                     <td>
                                         <div className="flex items-center space-x-2">
                                             <div className="avatar">
-                                                <div className="mask mask-squircle w-20 h-20">
+                                                <div className="mask mask-squircle w-24 h-24">
                                                     <img src={toy.photo} alt="Avatar Tailwind CSS Component" className='border- border-base-300 rounded-full' />
                                                 </div>
                                             </div>

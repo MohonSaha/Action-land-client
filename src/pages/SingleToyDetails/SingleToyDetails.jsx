@@ -28,22 +28,22 @@ const SingleToyDetails = () => {
                 </div>
                 <div className='flex justify-around flex-col'>
                     <div>
-                        <h1 className='text-4xl font-semibold'>{name}</h1>
+                        <h1 className='text-4xl font-semibold text-[#029a86]'>{name}</h1>
                         <div className='flex items-center mt-2 w-full'>
-                            <h2 className='flex-grow'>Rating: {rating}</h2>
+                            <h2 className='flex-grow text-lg font-semibold'>Rating: {rating}</h2>
                             <div className='flex  ml-12 flex-grow'>
-                                <FaShareAlt></FaShareAlt>
-                                <FaHeart className='ml-3'></FaHeart>
+                                <FaShareAlt className='text-2xl'></FaShareAlt>
+                                <FaHeart className='ml-3 text-2xl'></FaHeart>
                             </div>
                         </div>
-                        <p>Available Quantity: {quantity}</p>
+                        <p className='text-xl font-semibold mt-2'>Available Quantity: {quantity}</p>
                     </div>
 
-                    <h1 className='my-16 text-4xl'>${price}</h1>
+                    <h1 className='my-16 text-4xl font-semibold text-[#fa7092]'>${price}</h1>
 
                     <div>
-                        <button className='btn px-10'>Buy Now</button>
-                        <button className='btn ml-6 px-8'>Add to Cart</button>
+                        <button className='btn btn-outline rounded-lg bg-[#fa7092] border-[#fa7092] hover:bg-[#bc3a5b] hover:border-[#bc3a5b] transition-all duration-500 px-10'>Buy Now</button>
+                        <button className='btn btn-outline rounded-lg bg-[#03BFA7] border-[#03BFA7] hover:bg-[#089885] hover:border-[#03BFA7] transition-all duration-500  ml-6 px-8'>Add to Cart</button>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@ const SingleToyDetails = () => {
                 <div>
                     <div className='mt-5'>
                         <h3 className='text-md font-semibold text-slate-500'>Sold by:</h3>
-                        <h2 className=''>Name: {user?.displayName}</h2>
+                        <h2 className=''>Name: {user?.displayName ? user?.displayName : <span className='text-slate-400'>Name Not Found</span>}</h2>
                         <h2>Email: {user?.email}</h2>
                     </div>
 

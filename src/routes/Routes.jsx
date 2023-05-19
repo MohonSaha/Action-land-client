@@ -7,6 +7,7 @@ import AllToys from "../pages/AllToys/AllToys";
 import SingleToyDetails from "../pages/SingleToyDetails/SingleToyDetails";
 import AddAToy from "../pages/AddAToy/AddAToy";
 import Error from "../pages/Error/Error";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/toyDetails/:id',
-                element: <SingleToyDetails></SingleToyDetails>
+                element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>
             },
             {
                 path: '/login',
