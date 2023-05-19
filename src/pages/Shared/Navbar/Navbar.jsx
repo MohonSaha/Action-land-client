@@ -21,7 +21,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allToys'>All Toys</Link></li>
         {
-            user? <>
+            user ? <>
                 <li><Link to='/myToys'>My Toys</Link></li>
                 <li><Link to="/addToy">Add A Toy</Link></li>
                 <li><Link to='/blogs'>Blogs</Link></li>
@@ -29,12 +29,12 @@ const Navbar = () => {
             </>
                 :
                 <>
-                <li><Link to='/blogs'>Blogs</Link></li>
-                <li><Link to='/login'>Login</Link></li>
+                    <li><Link to='/blogs'>Blogs</Link></li>
+                    <li><Link to='/login'>Login</Link></li>
                 </>
         }
 
-        
+
 
     </>
 
@@ -69,9 +69,17 @@ const Navbar = () => {
                     <FaShoppingBag className="ml-4 border-2 border-slate-500 border-dashed p-2 rounded-full w-10 h-10 text-sm"></FaShoppingBag>
                     <div className="badge badge-md bg-[#fa7092] relative -top-3 -left-3 border-none text-white">0</div>
                     {
-                       <img className="h-11 w-11 rounded-full hover:scale-105 border-2 border-slate-500 border-dashed p-1 transition-all duration-700" src={user?.photoURL ? user?.photoURL : profile} alt="" />
+
+
+                        <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                            <Link to='/user'>
+                                <img className="h-11 w-11 rounded-full hover:scale-105 border-2 border-slate-500 border-dashed p-1 transition-all duration-700" src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                            </Link>
+                        </div>
+
+
                     }
-                    
+
                 </div>
             </div>
         </div>

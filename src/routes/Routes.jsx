@@ -8,6 +8,7 @@ import SingleToyDetails from "../pages/SingleToyDetails/SingleToyDetails";
 import AddAToy from "../pages/AddAToy/AddAToy";
 import Error from "../pages/Error/Error";
 import PrivateRoute from "./PrivateRoute";
+import UserProfile from "../pages/UserProfile/UserProfile";
 
 
 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/user',
+                element: <UserProfile></UserProfile>
             }
         ]
     },
