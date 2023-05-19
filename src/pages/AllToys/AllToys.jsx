@@ -1,11 +1,31 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { authContext } from '../../providers/AuthProviders';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const AllToys = () => {
 
 
     const { user } = useContext(authContext)
+    const navigate = useNavigate()
+
+
+    const handleViewDetails = (id) => {
+        if (!user) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You have to log in first to view details!',
+            })
+        }
+
+        navigate(`/toyDetails/${id}`)
+    }
+
+
+
+
+
     const [toys, setToys] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/showToys')
@@ -61,7 +81,7 @@ const AllToys = () => {
                                     <td>${toy.price}</td>
                                     <td>{user?.displayName}</td>
                                     <td>
-                                        <button className="btn btn-ghost btn-sm"><Link to={`/toyDetails/${toy._id}`}>View Details</Link></button>
+                                        <button onClick={() => handleViewDetails(toy._id)} className="btn bg-white border-white hover:bg-[#03BFA7] hover:text-white hover:border-[#03BFA7] transition-all duration-500 btn-sm text-[#03BFA7] ">View Details</button>
                                     </td>
                                 </tr>
                             </tbody>
