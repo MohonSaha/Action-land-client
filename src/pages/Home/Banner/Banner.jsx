@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../../../assets/images/banars/b-1.jpg'
+import img1 from '../../../assets/images/Super-banner/thum-2.jpg'
 import img2 from '../../../assets/images/banars/b-2.jpg'
 import img3 from '../../../assets/images/banars/b-3.jpg'
 import { FaBeer, FaPlus } from 'react-icons/fa';
@@ -11,14 +11,15 @@ const Banner = () => {
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={img1} className="w-full rounded-3xl" />
 
-                    <div className="absolute flex items-center left-0 top-0 bg-gradient-to-r from-[#00000092] to-[#0000004a] h-full w-full rounded-3xl">
+                    <div className="absolute flex items-center left-0 top-0 bg-gradient-to-r from-[#000000be] to-[#00000070] h-full w-full rounded-3xl">
 
                         <div className='text-white w-full text-center'>
                             <h3 className='md:text-xl font-bold mb-6'>Markets & Resource</h3>
                             <h2 className='text-2xl md:text-7xl  font-bold mb-28'>Find The Best <br />Doctor Near By You.</h2>
                             <div>
-                                <button className="text-white btn bg-[#03BFA7] border-[#03BFA7] mr-5 rounded-3xl">Shop Now<FaPlus className='ml-3'></FaPlus> </button>
-                                <button className="btn text-white btn-outline border-[#FFFFFF] rounded-3xl">READ MORE <FaPlus className='ml-3'></FaPlus></button>
+                                <button class="custom-primary-btn">
+                                    Shop Now<FaPlus className='ml-3'></FaPlus> </button>
+                                <button className="custom-secndary-btn ml-6 ">READ MORE <FaPlus className='ml-3'></FaPlus></button>
 
                             </div>
                         </div>
@@ -29,7 +30,7 @@ const Banner = () => {
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide4" className="btn btn-circle text-slate-600 bg-[#fff] border-[#fff]">❮</a>
                         <a href="#slide2" className="btn btn-circle text-slate-600 bg-[#fff] border-[#fff]">❯</a>
-                        
+
                     </div>
                 </div>
 
@@ -48,7 +49,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

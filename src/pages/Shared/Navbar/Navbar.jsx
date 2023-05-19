@@ -53,7 +53,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/' className="flex items-center">
-                        <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-2xl font-bold font-serif md:ml-4 ml-2"><span className="text-[#03BFA7]">Zoo</span><span className="text-[#FB80AB]">Land</span></span>
+                        <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-2xl font-bold font-serif md:ml-4 ml-2"><span className="text-[#03BFA7]">Zoo</span><span className="text-[#fa7092]">Land</span></span>
                     </Link>
                 </div>
                 <div className="navbar-center lg:ml-40  hidden lg:flex">
