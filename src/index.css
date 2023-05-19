@@ -10,3 +10,11 @@
 .custom-secndary-btn{
     @apply hover:bg-[#fa7092] btn rounded-full border-[#fa7092] text-white font-bold py-2 transition-all duration-500 btn-outline px-7
 }
+
+.custom-btn-outline{
+    @apply border-2 border-[#03BFA7] border-dashed hover:text-white uppercase font-semibold hover:scale-x-105 hover:bg-[#03BFA7] text-black bg-none px-8 rounded-full transition-all duration-500
+}
+
+.custom-active-btn{
+    @apply border-2 border-[#03BFA7] border-dashed text-white uppercase font-semibold hover:scale-x-105 bg-[#03BFA7] bg-none px-8 rounded-full transition-all duration-500
+}

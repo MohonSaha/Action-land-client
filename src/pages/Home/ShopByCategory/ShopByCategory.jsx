@@ -30,28 +30,31 @@ const ShopByCategory = () => {
 
 
     return (
-        <div className="flex justify-center mt-20">
-            <Tabs selectedIndex={selectedTab} onSelect={handleTabSelect}>
-                <TabList className="flex">
+        <div className="flex justify-center mt-20 w-full">
+            <h3>Shop By Category</h3>
+            <h1>Trending Toy Categoryes</h1>
+
+            <Tabs className=" " selectedIndex={selectedTab} onSelect={handleTabSelect}>
+                <TabList className="flex justify-center space-x-12">
                     <Tab
                         onClick={() => handleTabClick("Unicorn")}
-                        className={`px-4 py-2 rounded-sm ${selectedTab === 0 ? 'bg-blue-500 text-red-700' : 'bg-[#03BFA7] text-white'
-                            }`}
+                        selectedClassName="custom-active-btn"
+                        className='px-4 py-2 custom-btn-outline'
                     >
                         Unicorn
                     </Tab>
                     <Tab
                         onClick={() => handleTabClick("Teddy-bear")}
-                        className={`px-4 py-2 ${selectedTab === 1 ? 'bg-red-500 text-white' : 'bg-[#03BFA7] text-white'
-                            }`}
+                        selectedClassName="custom-active-btn"
+                        className='px-4 py-2 custom-btn-outline'
                     >
                         Teddy Bear
                     </Tab>
 
                     <Tab
                         onClick={() => handleTabClick("Dinosaur")}
-                        className={`px-4 py-2 ${selectedTab === 2 ? 'bg-red-500 text-white' : 'bg-[#03BFA7] text-white'
-                            }`}
+                        selectedClassName="custom-active-btn"
+                        className='px-4 py-2 custom-btn-outline'
                     >
                         Dinosaur
                     </Tab>

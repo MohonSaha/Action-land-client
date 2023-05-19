@@ -1,57 +1,112 @@
 [
     {
-        "name": "Cute Rainbow Unicorn",
-        "photo": "https://i.ibb.co/w01NSyy/unicors2.jpg",
+        "name": "Marvel Spider-Man Deluxe 6 Inch",
+        "photo": "https://i.ibb.co/MhFqvD6/m-1.jpg",
         "details": "The Cute Rainbow Unicorn stands out with its exceptional craftsmanship and attention to detail. Made from premium, ultra-soft materials, this plush toy is designed to provide both comfort and companionship. Its velvety fur is a delight to touch, and its sturdy construction ensures that it can withstand countless hugs and snuggles.This unicorn's most captivating feature is its beautiful rainbow-colored mane and tail. With a perfect blend of vibrant hues, this mystical creature brings a burst of color to any space. Its magical presence will inspire the imagination and transport you to a world of wonder and fantasy.",
         "rating": 4.5,
         "price": 30,
         "old_price": 60,
-        "sub_category": "Unicorn",
+        "sub_category": "Marvel",
         "quantity": 70
     },
     {
-        "name": "Cute Unicorn Soft Toys",
-        "photo": "https://i.ibb.co/hH03cXQ/unicors5.png",
+        "name": "Iron Man Hulk Buster",
+        "photo": "https://i.ibb.co/9T6MTdY/m-4.jpg",
         "details": "Crafted with meticulous care and attention to detail, our Cute Unicorn Soft Toys are made from high-quality materials, ensuring both softness and durability. The plush fur is incredibly huggable, inviting endless cuddles and comforting moments. Each unicorn is designed with meticulous stitching and careful craftsmanship, ensuring that every detail, from its colorful mane to its sparkling eyes, is enchanting and delightful. With their enchanting presence, these unicorns ignite the imagination and transport you to a world of fantasy and wonder. Their vibrant and magical designs, including pastel hues and glittering accents, make them stand out in any collection or as a decorative piece in a bedroom or nursery. Let their presence add a touch of whimsy to your surroundings and bring smiles to the faces of everyone who encounters them.",
         "rating": 3.5,
         "price": 90,
-        "sub_category": "Unicorn",
+        "sub_category": "Marvel",
         "quantity": 20
     },
     {
-        "name": "Beanie Boos Soft toys",
-        "photo": "https://i.ibb.co/BggkhJX/unicors1.jpg",
+        "name": "Marvel Black Widow Action Figure",
+        "photo": "https://i.ibb.co/4NCyBDQ/m-5.jpg",
         "details": "Each Beanie Boo features a unique and charming design, making them highly collectible. From cute kittens and playful puppies to exotic animals and mythical creatures, there's a Beanie Boo to suit every personality and preference. Whether you're looking for a cuddly companion or a decorative addition to your collection, Beanie Boos are the ideal choice.These soft toys are crafted with meticulous attention to detail, ensuring high quality and durability. Made from premium materials, Beanie Boos are both snuggly and long-lasting. Their soft, plush fur invites endless cuddles, providing comfort and companionship day and night.",
         "rating": 4.2,
         "price": 40,
-        "sub_category": "Teddy-bear",
+        "sub_category": "Marvel",
         "quantity": 30
     },
     {
-        "name": "Soft Penguin Plush Teddy Bear",
-        "photo": "https://i.ibb.co/FBttPck/tedy-bear2.jpg",
+        "name": "Marvel LegeX-men Juggernaut Cain Marko Collection",
+        "photo": "https://i.ibb.co/M1F9Kbw/m-3.jpg",
         "details": "Crafted with utmost care and attention to detail, our Soft Penguin Plush Teddy Bear is made from premium materials, ensuring a velvety-soft texture that invites endless hugs and snuggles. The plush fur is incredibly gentle against the skin, providing comfort and companionship whenever you need it. This penguin teddy bear stands out with its adorable penguin-like features. From its round belly and chubby wings to its lovable face and beady eyes, every detail is designed to capture the essence of a playful penguin. Its huggable size makes it perfect for little hands to hold and cuddle, while its sturdy construction ensures it can withstand plenty of love and play.",
         "rating": 3.2,
         "price": 29,
-        "sub_category": "Teddy-bear",
+        "sub_category": "Marvel",
         "quantity": 50
     },
     {
-        "name": "Washable Polyethylene Soft Dinosaur",
-        "photo": "https://i.ibb.co/g3Fp29h/dyno-1.jpg",
+        "name": "Single Sale Star Wars Building Blocks",
+        "photo": "https://i.ibb.co/ggL4gJp/sw-1.jpg",
         "details": "With its lifelike design and attention to detail, this dinosaur toy brings the wonder of the prehistoric era to life. From its textured scales to its realistic shape, every aspect is meticulously crafted to inspire awe and ignite curiosity. Watch as your child explores the world of dinosaurs, creating imaginative stories and engaging in educational play. Made with safety and comfort in mind, our Washable Polyethylene Soft Dinosaur is designed to be gentle against your child's skin. Its soft and plush texture provides a cozy and snuggly feel, perfect for comforting hugs and cuddles. The dinosaur's friendly expression and vibrant colors are sure to capture your child's attention and spark their imagination.",
         "rating": 3.0,
         "price": 79,
-        "sub_category": "Dinosaur",
+        "sub_category": "Star-wars",
         "quantity": 19
     },
     {
-        "name": "Interaction Ability Walkable Plastic Light Up Dinosaur",
-        "photo": "https://i.ibb.co/w47dLC8/dyno-2.jpg",
+        "name": "Single Sale Star Wars Series Space",
+        "photo": "https://i.ibb.co/j55GnKw/sw-2.jpg",
         "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
         "rating": 4.5,
         "price": 190,
-        "sub_category": "Dinosaur",
+        "sub_category": "Star-wars",
         "quantity": 60
+    },
+    {
+        "name": "Star Wars With Silver Dress",
+        "photo": "https://i.ibb.co/zQmSSvs/sw-3.jpg",
+        "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
+        "rating": 3.7,
+        "price": 290,
+        "sub_category": "Star-wars",
+        "quantity": 30
+    },
+    {
+        "name": "GC Lego Minifigures Star Wars",
+        "photo": "https://i.ibb.co/0yZj5NH/sw-4.jpg",
+        "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
+        "rating": 4.7,
+        "price": 99,
+        "sub_category": "Star-wars",
+        "quantity": 90
+    },
+
+    {
+        "name": "Transformer Robot Car for kids - Yello",
+        "photo": "https://i.ibb.co/6ZdvchJ/t-1.jpg",
+        "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
+        "rating": 4.5,
+        "price": 179,
+        "sub_category": "Transformers",
+        "quantity": 60
+    },
+    {
+        "name": "Transformers Blue Toys Studio Series 46 Deluxe Class ",
+        "photo": "https://i.ibb.co/tcR8ZH2/t-5.jpg",
+        "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
+        "rating": 3.5,
+        "price": 150,
+        "sub_category": "Transformers",
+        "quantity": 18
+    },
+    {
+        "name": "Transformers Toys EarthSpark Warrior",
+        "photo": "https://i.ibb.co/Rvys2M4/t-4.jpg",
+        "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
+        "rating": 3.2,
+        "price": 70,
+        "sub_category": "Transformers",
+        "quantity": 10
+    },
+    {
+        "name": "Transformers Toys Dark of the Moon",
+        "photo": "https://i.ibb.co/j8K6Vys/t-7.jpg",
+        "details": "To add an extra level of excitement, this dinosaur features colorful LED lights that illuminate its body. With a press of a button, the dinosaur comes alive with a mesmerizing display of lights, capturing the attention of both children and adults. The vibrant lights enhance the overall experience and create a captivating atmosphere during playtime. Crafted from high-quality, durable plastic, our Walkable Plastic Light Up Dinosaur is built to withstand the adventures of even the most enthusiastic young explorers. Its realistic design and intricate detailing make it visually appealing and engaging, transporting your child to the world of prehistoric creatures.",
+        "rating": 2.5,
+        "price": 130,
+        "sub_category": "Transformers",
+        "quantity": 90
     }
 ]
