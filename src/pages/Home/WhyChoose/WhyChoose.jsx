@@ -32,7 +32,7 @@ const WhyChoose = () => {
 
                     <div className=''>
                         <img className='rounded-lg md:w-[400px] w-44' src={img1} alt="" />
-                        <img className='rounded-lg relative w-96 -top-28 md:left-40 left-28' src={img2} alt="" />
+                        <img className='rounded-lg relative w-44 md:w-96 md:-top-28 -top-16 md:left-40 left-28' src={img2} alt="" />
                     </div>
 
 
