@@ -7,6 +7,7 @@ const MyToys = () => {
 
     const [myToys, setMyToys] = useState([])
     const { user } = useContext(authContext);
+    const [sort, setSort] = useState(-1);
 
 
 
@@ -45,22 +46,39 @@ const MyToys = () => {
 
 
 
-    const handleUpdateToys = id =>{
-        console.log(id);
-    }
-
-    const url = `http://localhost:5000/myToys?sEmail=${user?.email}&sort=1`
+    const url = `http://localhost:5000/myToys?sEmail=${user?.email}&sort=${sort}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data);
             })
-    }, [])
+    }, [sort])
+
+
+
+    
+
+  
+
 
 
     return (
         <div className='mt-16 md:mx-24'>
+
+            <div className='mb-12 flex justify-between'>
+                <h2>Total Listed Product: </h2>
+                <div className="dropdown dropdown-left">
+                    <label tabIndex={0} className="btn m-1">Click</label>
+                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li onClick={() => setSort(1)}><a>Accending</a></li>
+                        <li onClick={() => setSort(-1)}><a>Descending</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -85,7 +103,6 @@ const MyToys = () => {
                                 key={toy._id}
                                 toy={toy}
                                 handleDelete={handleDelete}
-                                handleUpdateToys={handleUpdateToys}
                             ></ChildRow>)
                         }
                     </tbody>

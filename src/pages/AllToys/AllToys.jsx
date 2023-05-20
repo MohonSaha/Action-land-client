@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 
 const AllToys = () => {
 
-
     const { user } = useContext(authContext)
     const navigate = useNavigate()
 
@@ -18,12 +17,8 @@ const AllToys = () => {
                 text: 'You have to log in first to view details!',
             })
         }
-
         navigate(`/toyDetails/${id}`)
     }
-
-
-
 
 
     const [toys, setToys] = useState([])
@@ -44,6 +39,11 @@ const AllToys = () => {
                     <h3 className='text-xl text-[#03BFA7] font-semibold'>All Toys</h3>
                     <h1 className='text-5xl font-bold'>Total Posted Toys</h1>
                 </div>
+
+
+
+
+                
                 <table className="table w-full  my-table">
                     {/* head */}
                     <thead>

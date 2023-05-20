@@ -25,8 +25,6 @@ const UpdateToys = () => {
         const quantity = form.quantity.value;
 
         const updatedToys = {details,price, quantity};
-        console.log(updatedToys);
-        console.log(id);
 
         fetch(`http://localhost:5000/updateToys/${id}`,{
             method: "PUT",
