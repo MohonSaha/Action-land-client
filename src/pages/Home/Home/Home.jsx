@@ -15,14 +15,18 @@ const Home = () => {
             <Banner></Banner>
             <TrendyCollection></TrendyCollection>
 
-            {/* <div className='relative text-center -top-[250px]'>
+            <div className='relative text-center top-16 md:-top-[250px]'>
                 <h3 className='text-xl text-[#03BFA7] font-semibold'>Best Collection</h3>
                 <h1 className='text-5xl font-bold'>Attractive Toys Gallary </h1>
-            </div> */}
-{/* 
-            <ToyGallary>{2000}</ToyGallary>
-            <ToyGallary>{5000}</ToyGallary>
-            <ShopByCategory></ShopByCategory>
+            </div>
+
+
+            <div className='mt-32'>
+
+                <ToyGallary>{2000}</ToyGallary>
+                <ToyGallary>{5000}</ToyGallary>
+            </div>
+            {/* <ShopByCategory></ShopByCategory>
             <WhyChoose></WhyChoose>
             <Subscribe></Subscribe> */}
 
