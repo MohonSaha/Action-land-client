@@ -56,7 +56,7 @@ const ToyGallary = ({children}) => {
                         // when window width is >= 640px
                         576: {
                             width: 640,
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                         },
                         // when window width is >= 768px
                         768: {

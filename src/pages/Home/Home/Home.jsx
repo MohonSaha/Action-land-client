@@ -23,11 +23,11 @@ const Home = () => {
 
             <div className='mt-32'>
 
-                <ToyGallary>{2000}</ToyGallary>
-                <ToyGallary>{5000}</ToyGallary>
+                <ToyGallary>{3000}</ToyGallary>
+                <ToyGallary>{6000}</ToyGallary>
             </div>
-            {/* <ShopByCategory></ShopByCategory>
-            <WhyChoose></WhyChoose>
+            <ShopByCategory></ShopByCategory>
+            {/* <WhyChoose></WhyChoose>
             <Subscribe></Subscribe> */}
 
         </div>

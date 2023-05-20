@@ -33,7 +33,7 @@ const ShopByCategory = () => {
     return (
 
 
-        <div className='-mt-12'>
+        <div className='md:-mt-12 mt-16'>
             <div className='mb-6 text-center '>
                 <h3 className='text-xl text-[#03BFA7] font-semibold'> Shop By Category</h3 >
                 <h1 className='text-5xl font-bold'>Trending Toy Categoryes</h1>
@@ -46,18 +46,18 @@ const ShopByCategory = () => {
 
 
                 <Tabs className=" " selectedIndex={selectedTab} onSelect={handleTabSelect}>
-                    <TabList className="flex justify-center space-x-12">
+                    <TabList className="flex justify-center md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-12">
                         <Tab
                             onClick={() => handleTabClick("Marvel")}
                             selectedClassName="custom-active-btn"
-                            className='px-4 py-2 custom-btn-outline'
+                            className='px-4 py-2 custom-btn-outline md:mx-0 mx-auto'
                         >
                             Marvel
                         </Tab>
                         <Tab
                             onClick={() => handleTabClick("Star-wars")}
                             selectedClassName="custom-active-btn"
-                            className='px-4 py-2 custom-btn-outline'
+                            className='px-4 py-2 custom-btn-outline md:mx-0 mx-auto'
                         >
                             Star-wars
                         </Tab>
@@ -65,7 +65,7 @@ const ShopByCategory = () => {
                         <Tab
                             onClick={() => handleTabClick("Transformers")}
                             selectedClassName="custom-active-btn"
-                            className='px-4 py-2 custom-btn-outline'
+                            className='px-4 py-2 custom-btn-outline md:mx-0 mx-auto'
                         >
                             Transformers
                         </Tab>
@@ -75,7 +75,7 @@ const ShopByCategory = () => {
 
                     <TabPanel className="mt-12">
 
-                        <div className="flex gap-6">
+                        <div className="flex gap-6 md:flex-row flex-col">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}
@@ -87,7 +87,7 @@ const ShopByCategory = () => {
 
                     <TabPanel>
 
-                        <div className="flex gap-6">
+                        <div className="flex gap-6 md:flex-row flex-col">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}
@@ -99,7 +99,7 @@ const ShopByCategory = () => {
 
                     <TabPanel>
 
-                        <div className="flex gap-6">
+                        <div className="flex gap-6 md:flex-row flex-col">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}
