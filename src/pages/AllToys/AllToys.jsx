@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { authContext } from '../../providers/AuthProviders';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import TitlePage from '../Shared/TitlePage/TitlePage';
 
 const AllToys = () => {
 
@@ -34,6 +35,8 @@ const AllToys = () => {
 
     return (
         <div>
+            <TitlePage title="Home | All Toys"></TitlePage>
+
             <div className="overflow-x-auto mt-16 md:mx-24">
                 <div className='text-center mb-8'>
                     <h3 className='text-xl text-[#03BFA7] font-semibold'>All Toys</h3>
@@ -43,7 +46,7 @@ const AllToys = () => {
 
 
 
-                
+
                 <table className="table w-full  my-table">
                     {/* head */}
                     <thead>
@@ -79,7 +82,7 @@ const AllToys = () => {
                                         </div>
                                     </td>
                                     <td>${toy.price}</td>
-                                    <td>{user?.displayName}</td>
+                                    <td>{toy.sName ? toy.sName : <span className='text-slate-500'>Not Found</span>}</td>
                                     <td>
                                         <button onClick={() => handleViewDetails(toy._id)} className="btn bg-white border-white hover:bg-[#03BFA7] hover:text-white hover:border-[#03BFA7] transition-all duration-500 btn-sm text-[#03BFA7] ">View Details</button>
                                     </td>

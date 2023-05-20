@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { FaCcPaypal, FaCcVisa, FaHeart, FaMoneyBillAlt, FaRegClock, FaShare, FaShareAlt, FaShareSquare } from 'react-icons/fa';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { authContext } from '../../providers/AuthProviders';
+import TitlePage from '../Shared/TitlePage/TitlePage';
 
 const SingleToyDetails = () => {
 
@@ -18,10 +19,13 @@ const SingleToyDetails = () => {
             })
     }, [])
 
-    const { name, photo, rating, price, quantity, details } = toyDetails;
+    const { name, photo, rating, price, quantity, details, sName } = toyDetails;
 
     return (
         <div className='bg-base-300 min-h-screen -mb-20 py-10'>
+
+            <TitlePage title="Home | Toy Details"></TitlePage>
+
             <div className='grid md:grid-cols-3 bg-white md:mx-12 p-10 rounded-md h-fit gap-x-6'>
                 <div>
                     <img src={photo} alt="" />
@@ -51,18 +55,18 @@ const SingleToyDetails = () => {
                 <div>
                     <div className='mt-5'>
                         <h3 className='text-md font-semibold text-slate-500'>Sold by:</h3>
-                        <h2 className=''>Name: {user?.displayName ? user?.displayName : <span className='text-slate-400'>Name Not Found</span>}</h2>
-                        <h2>Email: {user?.email}</h2>
+                        <h2 className=''>Name: {sName ? sName : <span className='text-slate-500'>Not Found</span>} 
+                        </h2>
                     </div>
 
-                    <hr className='border-1 my-3 border-slate-400'/>
+                    <hr className='border-1 my-3 border-slate-400' />
                     <div>
                         <h3 className='text-md font-semibold text-slate-500'>Payment Method:</h3>
                         <h2 className='flex items-center'><FaMoneyBillAlt></FaMoneyBillAlt> <span className='ml-3'>Cash on Delivery Available</span> </h2>
                         <h2 className='flex items-center'><FaCcVisa></FaCcVisa> <span className='ml-3'>Visa Card</span></h2>
                         <h2 className='flex items-center'><FaCcPaypal></FaCcPaypal> <span className='ml-3'>Paypal</span></h2>
                     </div>
-                    <hr className='border-1 my-3 border-slate-400'/>
+                    <hr className='border-1 my-3 border-slate-400' />
 
                     <div>
                         <h3 className='text-md font-semibold text-slate-500'>Service:</h3>

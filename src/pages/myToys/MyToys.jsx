@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { authContext } from '../../providers/AuthProviders';
 import ChildRow from './ChildRow';
 import Swal from 'sweetalert2';
+import TitlePage from '../Shared/TitlePage/TitlePage';
 
 const MyToys = () => {
 
@@ -57,20 +58,22 @@ const MyToys = () => {
 
 
 
-    
 
-  
+
+
 
 
 
     return (
         <div className='mt-16 md:mx-24'>
 
-            <div className='mb-12 flex justify-between'>
-                <h2>Total Listed Product: </h2>
+            <TitlePage title="Home | My Toy"></TitlePage>
+
+            <div className='mb-6 flex justify-between'>
+                <h2 className='text-2xl font-bold'>Total Listed Product: {myToys.length}</h2>
                 <div className="dropdown dropdown-left">
-                    <label tabIndex={0} className="btn m-1">Click</label>
-                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <label tabIndex={0} className="btn btn-sm py-1">Sort by price</label>
+                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-200 border-2 border-[#03BFA7] rounded-box w-52">
                         <li onClick={() => setSort(1)}><a>Accending</a></li>
                         <li onClick={() => setSort(-1)}><a>Descending</a></li>
                     </ul>

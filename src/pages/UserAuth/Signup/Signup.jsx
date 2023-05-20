@@ -3,6 +3,7 @@ import logo from '../../../assets/images/Logos/login.jpg'
 import { useContext, useState } from 'react';
 import { authContext } from '../../../providers/AuthProviders';
 import { updateProfile } from 'firebase/auth';
+import TitlePage from '../../Shared/TitlePage/TitlePage';
 
 const SignUp = () => {
 
@@ -65,6 +66,9 @@ const SignUp = () => {
 
     return (
         <div className="hero min-h-screen">
+            <TitlePage title="Home | Sign Up"></TitlePage>
+
+
             <div className="hero-content flex-col lg:flex-row ">
                 <div className="text-center lg:text-left w-1/2 mr-32">
                     <img src={logo} alt="" />

@@ -5,10 +5,13 @@ import WhyChoose from '../WhyChoose/WhyChoose';
 import Subscribe from '../Subscribe/Subscribe';
 import TrendyCollection from '../TrendyCollection/TrendyCollection';
 import ToyGallary from '../ToyGallary/ToyGallary';
+import TitlePage from '../../Shared/TitlePage/TitlePage';
 
 const Home = () => {
     return (
         <div>
+
+            <TitlePage title="Home"></TitlePage>
             <Banner></Banner>
             <TrendyCollection></TrendyCollection>
 

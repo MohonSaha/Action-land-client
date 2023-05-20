@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import { authContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
+import TitlePage from '../Shared/TitlePage/TitlePage';
 
 const AddAToy = () => {
 
@@ -58,7 +59,10 @@ const AddAToy = () => {
 
 
     return (
+
         <div className=''>
+            <TitlePage title="Home | Add A Toy"></TitlePage>
+
             <div className="bg-base-200 py-16 md:px-64 px-8 min-h-screen">
                 <Link className='flex items-center font-semibold text-xl' to='/allToys'><FaArrowLeft className='mr-3'></FaArrowLeft> All Toys</Link>
 

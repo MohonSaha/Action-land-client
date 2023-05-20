@@ -3,11 +3,13 @@ import img from '../../../assets/images/Logos/login.jpg'
 import { FaGoogle } from 'react-icons/fa';
 import { useContext, useState } from 'react';
 import { authContext } from '../../../providers/AuthProviders';
+import TitlePage from '../../Shared/TitlePage/TitlePage';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
 
-    const {signIn, user, signInWithGoogle} = useContext(authContext);
+    const { signIn, user, signInWithGoogle } = useContext(authContext);
     const [error, setError] = useState('');
 
 
@@ -16,7 +18,7 @@ const Login = () => {
 
     const from = location.state?.from?.pathname || '/';
 
-    const handleLogin = event =>{
+    const handleLogin = event => {
         event.preventDefault();
         setError('')
         const form = event.target;
@@ -25,35 +27,48 @@ const Login = () => {
 
 
         signIn(email, password)
-        .then(result =>{
-            const user = result.user;
-            navigate(from, { replace: true })
-            console.log(user);
-        })
-        .catch(error => {
-            setError(error.message)
-        })
+            .then(result => {
+                const user = result.user;
+                navigate(from, { replace: true })
+                Swal.fire(
+                    'Good job!',
+                    'You have successfully logged in!',
+                    'success'
+                )
+            })
+            .catch(error => {
+                setError(error.message)
+            })
 
     }
 
 
     // Handle Google signIn: 
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         setError('');
-        
+
         signInWithGoogle()
-        .then(result=>{
-            const loggedUser = result.user;
-            console.log(loggedUser);
-        })
-        .catch(error => {
-            setError(error.message)
-        })
+            .then(result => {
+                const loggedUser = result.user;
+
+                navigate(from, { replace: true })
+                Swal.fire(
+                    'Good job!',
+                    'You have successfully logged in!',
+                    'success'
+                )
+            })
+            .catch(error => {
+                setError(error.message)
+            })
     }
 
 
     return (
         <div className="hero min-h-screen">
+            <TitlePage title="Home | Log In"></TitlePage>
+
+
             <div className="hero-content flex-col lg:flex-row ">
                 <div className="text-center lg:text-left w-1/2 mr-32">
                     <img src={img} alt="" />
@@ -84,14 +99,14 @@ const Login = () => {
                             </p>
 
                             <div className="form-control mt-6">
-                                <input type="submit" className='btn text-white bg-[#09917f] border-[#09917f]' value="Sign In" />
+                                <input type="submit" className='btn text-white bg-[#09917f] border-[#09917f]' value="Log In" />
                             </div>
                         </form>
 
                         <div className="divider">OR</div>
-                       <button onClick={handleGoogleSignIn} className='btn bg-white text-[#09917f]'>
-                        <FaGoogle className='mr-4'></FaGoogle> Sign In With Google
-                       </button>
+                        <button onClick={handleGoogleSignIn} className='btn bg-white text-[#09917f]'>
+                            <FaGoogle className='mr-4'></FaGoogle> Sign In With Google
+                        </button>
 
                         <p className='text-center'>New to Car Doctor? <Link className='text-[#017f7f]' to='/signup'>Sign Up</Link></p>
                     </div>
