@@ -31,8 +31,8 @@ const WhyChoose = () => {
                     </div>
 
                     <div className=''>
-                        <img className='rounded-lg md:w-[400px] w-3/6' src={img1} alt="" />
-                        <img className='rounded-lg relative w-3/6 md:w-96 md:-top-28 -top-12 md:left-40 left-20 ' src={img2} alt="" />
+                        <img className='rounded-lg md:w-[400px] w-4/6' src={img1} alt="" />
+                        <img className='rounded-lg relative w-4/6 md:w-96 md:-top-28 -top-12 md:left-40 left-20 ' src={img2} alt="" />
                     </div>
 
 

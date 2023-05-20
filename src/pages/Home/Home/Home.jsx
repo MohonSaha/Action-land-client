@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             <ShopByCategory></ShopByCategory>
             <WhyChoose></WhyChoose>
-            {/* <Subscribe></Subscribe> */}
+            <Subscribe></Subscribe>
 
         </div>
     );
