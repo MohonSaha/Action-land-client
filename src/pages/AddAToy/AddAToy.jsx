@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import { authContext } from '../../providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 const AddAToy = () => {
 
@@ -24,11 +25,11 @@ const AddAToy = () => {
         const price = form.price.value;
         const sName = form.sName.value;
         const sEmail = form.sEmail.value;
-        const category = selected;
+        const sub_category = selected;
         const quantity = form.quantity.value;
         const rating = form.rating.value;
 
-        const newToys = { name, photo, details, category, sName, sEmail, price, quantity, rating };
+        const newToys = { name, photo, details, sub_category, sName, sEmail, price, quantity, rating };
         console.log(newToys);
 
         fetch('http://localhost:5000/addToys', {
@@ -41,8 +42,12 @@ const AddAToy = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data?.insertedId){
-                    // setControl(!control)
+                if (data?.insertedId) {
+                    Swal.fire(
+                        'Good job!',
+                        'Successfully added new product.',
+                        'success'
+                    )
 
                 }
                 form.reset()
@@ -55,7 +60,7 @@ const AddAToy = () => {
 
     return (
         <div className=''>
-            <div className="bg-[#017f7f89] py-16 md:px-64 px-8 min-h-screen">
+            <div className="bg-base-200 py-16 md:px-64 px-8 min-h-screen">
                 <Link className='flex items-center font-semibold text-xl' to='/allToys'><FaArrowLeft className='mr-3'></FaArrowLeft> All Toys</Link>
 
                 <form onSubmit={handleAddToys}>
@@ -87,9 +92,9 @@ const AddAToy = () => {
                                 <span className="label-text text-xl font-semibold px-1">Category</span>
                                 <select onChange={handleChange} className="select w-full mt-2">
                                     <option disabled selected>Select toy category</option>
-                                    <option>Unicorn</option>
-                                    <option>Teddy-bear</option>
-                                    <option>Dinosaur</option>
+                                    <option>Marvel</option>
+                                    <option>Star-wars</option>
+                                    <option>Transformers</option>
                                 </select>
                             </div>
 
@@ -159,12 +164,12 @@ const AddAToy = () => {
                         <label className="label">
                             <span className="label-text text-lg font-semibold">Details</span>
                         </label>
-                    <textarea placeholder='Toy details' className='rounded-lg p-3' id="details" name="details" rows="4" cols="50"> </textarea>
-            </div>
+                        <textarea placeholder='Toy details' className='rounded-lg p-3' id="details" name="details" rows="4" cols="50"> </textarea>
+                    </div>
 
 
-            <input type="submit" className="btn w-full bg-[#06625e] mt-10" value="Save" />
-        </form>
+                    <input type="submit" className="btn w-full bg-[#0a9b87] border-[#0a9b87] hover:bg-[#067c6c] hover:border-[#067c6c] text-white mt-10" value="Save" />
+                </form>
             </div >
         </div >
     );
