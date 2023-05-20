@@ -11,9 +11,6 @@ const MyToys = () => {
 
 
     const handleDelete = id => {
-        console.log(id);
-
-
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -30,7 +27,7 @@ const MyToys = () => {
                         'Your file has been deleted.',
                         'success'
                     )
-                    
+
                     fetch(`http://localhost:5000/myToys/${id}`, {
                         method: "DELETE"
                     })
@@ -42,16 +39,14 @@ const MyToys = () => {
                                 setMyToys(restToys)
                             }
                         })
-
                 }
             })
+    }
 
 
 
-
-
-
-
+    const handleUpdateToys = id =>{
+        console.log(id);
     }
 
     const url = `http://localhost:5000/myToys?sEmail=${user?.email}&sort=1`
@@ -90,6 +85,7 @@ const MyToys = () => {
                                 key={toy._id}
                                 toy={toy}
                                 handleDelete={handleDelete}
+                                handleUpdateToys={handleUpdateToys}
                             ></ChildRow>)
                         }
                     </tbody>

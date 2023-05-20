@@ -10,6 +10,7 @@ import Error from "../pages/Error/Error";
 import PrivateRoute from "./PrivateRoute";
 import UserProfile from "../pages/UserProfile/UserProfile";
 import MyToys from "../pages/myToys/myToys";
+import UpdateToys from "../pages/UpdateToys/UpdateToys";
 
 
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
             {
                 path: '/myToys',
                 element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
+            },
+            {
+                path: '/myToys/update/:id',
+                element: <UpdateToys></UpdateToys>
             }
         ]
     },
