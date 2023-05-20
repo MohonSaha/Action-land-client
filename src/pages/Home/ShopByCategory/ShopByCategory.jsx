@@ -19,7 +19,7 @@ const ShopByCategory = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToys/${activeTab}`)
+        fetch(`https://zoo-land-server.vercel.app/allToys/${activeTab}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data)

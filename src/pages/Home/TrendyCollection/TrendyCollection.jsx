@@ -4,8 +4,8 @@ import demo2 from '../../../assets/images/Super-trendy/demo-2.jpg'
 
 const TrendyCollection = () => {
     return (
-        <div className='mx-32 mt-16'>
-            <div className='flex md:gap-x-12'>
+        <div className='mx-32 mt-16' >
+            <div className='flex md:gap-x-12' data-aos="fade-right">
                 <img className='w-5/6 h-[700px] rounded-3xl' src={demo1} alt="" />
                 <div className='w-4/5'>
                     <h1 className='text-5xl font-semibold'>Trendy Toys For Your Kids</h1>
@@ -15,7 +15,7 @@ const TrendyCollection = () => {
             </div>
 
 
-            <div className='flex md:gap-x-12 flex-row-reverse mt-8'>
+            <div className='flex md:gap-x-12 flex-row-reverse mt-8' data-aos="fade-left">
                 <img className='w-5/6 h-[700px] rounded-3xl relative -top-96' src={demo2} alt="" />
                 <div className='w-4/5'>
                     <h1 className='text-5xl font-semibold'>New Toys Collection For Kids</h1>

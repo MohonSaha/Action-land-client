@@ -12,14 +12,14 @@ const SingleToyDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toyDetails/${id}`)
+        fetch(`https://zoo-land-server.vercel.app/toyDetails/${id}`)
             .then(res => res.json())
             .then(data => {
                 setToyDetails(data);
             })
     }, [])
 
-    const { name, photo, rating, price, quantity, details, sName } = toyDetails;
+    const { name, photo, rating, price, quantity, details, sName,sEmail } = toyDetails;
 
     return (
         <div className='bg-base-300 min-h-screen -mb-20 py-10 mt-16'>
@@ -56,6 +56,8 @@ const SingleToyDetails = () => {
                     <div className='mt-5'>
                         <h3 className='text-md font-semibold text-slate-500'>Sold by:</h3>
                         <h2 className=''>Name: {sName ? sName : <span className='text-slate-500'>Not Found</span>} 
+                        </h2>
+                        <h2 className=''>Email: {sEmail ? sEmail : <span className='text-slate-500'>Not Found</span>} 
                         </h2>
                     </div>
 

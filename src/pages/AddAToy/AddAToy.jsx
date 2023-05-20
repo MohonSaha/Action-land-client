@@ -32,7 +32,7 @@ const AddAToy = () => {
 
         const newToys = { name, photo, details, sub_category, sName, sEmail, price, quantity, rating };
 
-        fetch('http://localhost:5000/addToys', {
+        fetch('https://zoo-land-server.vercel.app/addToys', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

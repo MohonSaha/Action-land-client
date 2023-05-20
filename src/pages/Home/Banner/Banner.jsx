@@ -9,9 +9,9 @@ const Banner = () => {
         <div>
             <div className="carousel md:mx-8 h-[500px] md:h-[600px]">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src={img1} className="w-full rounded-3xl" />
+                    <img src={img1} className="w-full md:rounded-3xl" />
 
-                    <div className="absolute flex items-center left-0 top-0 bg-gradient-to-r from-[#000000be] to-[#00000070] h-full w-full rounded-3xl">
+                    <div className="absolute flex items-center left-0 top-0 bg-gradient-to-r from-[#000000be] to-[#00000070] h-full w-full md:rounded-3xl">
 
                         <div className='text-white w-full text-center'>
                             <h3 className='md:text-xl font-bold mb-6'>Markets & Resource</h3>

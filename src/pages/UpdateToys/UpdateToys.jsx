@@ -9,7 +9,7 @@ const UpdateToys = () => {
 
     const [toys, setToys] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/update/${id}`)
+        fetch(`https://zoo-land-server.vercel.app/update/${id}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -26,7 +26,7 @@ const UpdateToys = () => {
 
         const updatedToys = {details,price, quantity};
 
-        fetch(`http://localhost:5000/updateToys/${id}`,{
+        fetch(`https://zoo-land-server.vercel.app/updateToys/${id}`,{
             method: "PUT",
             headers: {
                 "content-type" : "application/json"

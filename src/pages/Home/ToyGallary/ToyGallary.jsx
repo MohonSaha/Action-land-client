@@ -27,7 +27,7 @@ const ToyGallary = ({children}) => {
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/allHeors')
+        fetch('https://zoo-land-server.vercel.app/allHeors')
         .then(res => res.json())
         .then(data => {
             setHeros(data)
@@ -40,8 +40,10 @@ const ToyGallary = ({children}) => {
 
 
     return (
-        <div>
-            <div className='relative md:mx-16 mx-4 -top-[200px]'>
+        <div data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="500">
+            <div className='relative md:mx-16 mx-4 -top-[200px]' >
                 <Swiper
                     className='mt-2'
                     // install Swiper modules

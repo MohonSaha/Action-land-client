@@ -32,7 +32,7 @@ const MyToys = () => {
                         'success'
                     )
 
-                    fetch(`http://localhost:5000/myToys/${id}`, {
+                    fetch(`https://zoo-land-server.vercel.app/myToys/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
@@ -49,7 +49,7 @@ const MyToys = () => {
 
 
 
-    const url = `http://localhost:5000/myToys?sEmail=${user?.email}&sort=${sort}`
+    const url = `https://zoo-land-server.vercel.app/myToys?sEmail=${user?.email}&sort=${sort}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

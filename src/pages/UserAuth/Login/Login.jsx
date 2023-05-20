@@ -65,7 +65,7 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen mt-24">
             <TitlePage title="Home | Log In"></TitlePage>
 
 
