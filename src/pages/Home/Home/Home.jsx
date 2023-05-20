@@ -29,7 +29,7 @@ const Home = () => {
                 <ToyGallary>{6000}</ToyGallary>
             </div>
             <ShopByCategory></ShopByCategory>
-            {/* <WhyChoose></WhyChoose> */}
+            <WhyChoose></WhyChoose>
             {/* <Subscribe></Subscribe> */}
 
         </div>
