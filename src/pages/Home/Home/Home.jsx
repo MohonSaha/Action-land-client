@@ -13,7 +13,7 @@ const Home = () => {
 
             <TitlePage title="Home"></TitlePage>
             <Banner></Banner>
-            {/* <TrendyCollection></TrendyCollection> */}
+            <TrendyCollection></TrendyCollection>
 
             {/* <div className='relative text-center -top-[250px]'>
                 <h3 className='text-xl text-[#03BFA7] font-semibold'>Best Collection</h3>
