@@ -33,7 +33,7 @@ const ShopByCategory = () => {
     return (
 
 
-        <div className='md:-mt-12 mt-16'>
+        <div className='md:-mt-12 mt-16 '>
             <div className='mb-6 text-center '>
                 <h3 className='text-xl text-[#03BFA7] font-semibold'> Shop By Category</h3 >
                 <h1 className='text-5xl font-bold'>Trending Toy Categoryes</h1>
@@ -73,9 +73,9 @@ const ShopByCategory = () => {
 
 
 
-                    <TabPanel className="mt-12">
+                    <TabPanel className="mt-12 mx-0">
 
-                        <div className="flex gap-6 md:flex-row flex-col">
+                        <div className="flex gap-6 mx-6 md:flex-row flex-col">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}

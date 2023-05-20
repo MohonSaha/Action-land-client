@@ -28,9 +28,9 @@ const Home = () => {
                 <ToyGallary>{3000}</ToyGallary>
                 <ToyGallary>{6000}</ToyGallary>
             </div>
-            {/* <ShopByCategory></ShopByCategory>
-            <WhyChoose></WhyChoose>
-            <Subscribe></Subscribe> */}
+            <ShopByCategory></ShopByCategory>
+            {/* <WhyChoose></WhyChoose> */}
+            {/* <Subscribe></Subscribe> */}
 
         </div>
     );

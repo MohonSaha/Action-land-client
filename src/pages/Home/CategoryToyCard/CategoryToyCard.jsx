@@ -26,9 +26,9 @@ const CategoryToyCard = ({ toy }) => {
 
 
     return (
-        <div>
-            <div className="card card-compact w-72 border-2 border-gray-300 bg-base-200 shadow-xl h-[500px]">
-                <figure className='h-[270px]'><img className='h-fit w-full' src={photo} alt="Shoes" /></figure>
+        <div className=''>
+            <div className="card card-compact md:w-72 w-full border-2 border-gray-300 bg-base-200 shadow-xl h-[500px]">
+                <figure className='md:h-[270px]'><img className='h-fit w-full' src={photo} alt="Shoes" /></figure>
                 <div className="card-body flex flex-col justify-between">
 
                     <h2 className="card-title text-[#03BFA7]"> {name.length < 20 ? name : name.slice(0, 20) + '...'}</h2>
