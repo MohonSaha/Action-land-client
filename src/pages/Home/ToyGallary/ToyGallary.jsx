@@ -40,10 +40,8 @@ const ToyGallary = ({children}) => {
 
 
     return (
-        <div data-aos="fade-up"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="500">
-            <div className='relative md:mx-16 mx- md:-top-[200px]' >
+        <div>
+            <div className='relative md:mx-16 px-12 md:px-0 md:-top-[300px]' >
                 <Swiper
                     className='mt-2'
                     // install Swiper modules
@@ -84,7 +82,7 @@ const ToyGallary = ({children}) => {
 
 
                     {
-                        heros.map(hero => <SwiperSlide className='md:-mx-8 -mx-48'><ToyImage
+                        heros.map(hero => <SwiperSlide className='md:-mx-8 -mx-'><ToyImage
                             key={hero._id}
                             hero={hero}
                         ></ToyImage></SwiperSlide>)

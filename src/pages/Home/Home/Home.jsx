@@ -17,18 +17,20 @@ const Home = () => {
 
             <div className='relative text-center top-16 md:-top-[250px]'>
                 <h3 className='text-xl text-[#03BFA7] font-semibold'>Best Collection</h3>
-                <h1 className='text-5xl font-bold'>Attractive Toys Gallary </h1>
+                <h1 className='md:text-5xl text-3xl font-bold'>Attractive Toys Gallary </h1>
             </div>
 
 
-            <div className='mt-32'>
+            <div className='mt-24 md-mt-0'  data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="500">
 
                 <ToyGallary>{3000}</ToyGallary>
                 <ToyGallary>{6000}</ToyGallary>
             </div>
-            <ShopByCategory></ShopByCategory>
+            {/* <ShopByCategory></ShopByCategory>
             <WhyChoose></WhyChoose>
-            {/* <Subscribe></Subscribe> */}
+            <Subscribe></Subscribe> */}
 
         </div>
     );

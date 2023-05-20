@@ -3,7 +3,7 @@ import image from '../../../assets/images/banars/cartoon.jpg'
 
 const Subscribe = () => {
     return (
-        <div className=''>
+        <div className='mx-6'>
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row gap-16">
                     <img src={image} className="w-sm md:max-w-lg rounded-lg shadow-2xl" />
