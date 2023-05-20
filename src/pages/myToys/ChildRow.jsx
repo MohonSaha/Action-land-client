@@ -1,14 +1,14 @@
 import React from 'react';
 
-const ChildRow = ({ toy }) => {
+const ChildRow = ({ toy, handleDelete }) => {
 
 
-    const { name, photo, sub_category, quantity, price } = toy;
+    const { name, photo, sub_category, quantity, price, _id } = toy;
 
     return (
         <tr className='border-2 border-base-300'>
             <th>
-                <button className="btn btn-circle bg-[#03BFA7] border-[#03BFA7] hover:bg-[#fa7092] hover:border-[#fa7092]  text-white">
+                <button onClick={()=> handleDelete(_id)} className="btn btn-circle bg-[#03BFA7] border-[#03BFA7] hover:bg-[#fa7092] hover:border-[#fa7092]  text-white">
                     X
                 </button>
             </th>
