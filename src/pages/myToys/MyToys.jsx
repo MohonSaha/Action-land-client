@@ -67,7 +67,7 @@ const MyToys = () => {
 
 
     return (
-        <div className='mt-16 md:mx-24'>
+        <div className='mt-32 md:mx-24'>
 
             <TitlePage title="Home | My Toy"></TitlePage>
             

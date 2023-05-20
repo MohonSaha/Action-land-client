@@ -22,11 +22,11 @@ const SingleToyDetails = () => {
     const { name, photo, rating, price, quantity, details, sName } = toyDetails;
 
     return (
-        <div className='bg-base-300 min-h-screen -mb-20 py-10'>
+        <div className='bg-base-300 min-h-screen -mb-20 py-10 mt-16'>
 
             <TitlePage title="Home | Toy Details"></TitlePage>
 
-            <div className='grid md:grid-cols-3 bg-white md:mx-12 p-10 rounded-md h-fit gap-x-6'>
+            <div className='grid md:grid-cols-3 bg-white md:mx-12 p-10 rounded-lg h-fit gap-x-6'>
                 <div>
                     <img src={photo} alt="" />
                 </div>

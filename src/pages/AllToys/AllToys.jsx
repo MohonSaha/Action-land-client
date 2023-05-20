@@ -37,7 +37,7 @@ const AllToys = () => {
         <div>
             <TitlePage title="Home | All Toys"></TitlePage>
 
-            <div className="overflow-x-auto mt-16 md:mx-24">
+            <div className="overflow-x-auto mt-28 md:mx-24">
                 <div className='text-center mb-8'>
                     <h3 className='text-xl text-[#03BFA7] font-semibold'>All Toys</h3>
                     <h1 className='text-5xl font-bold'>Total Posted Toys</h1>

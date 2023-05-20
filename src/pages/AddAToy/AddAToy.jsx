@@ -63,8 +63,8 @@ const AddAToy = () => {
         <div className=''>
             <TitlePage title="Home | Add A Toy"></TitlePage>
 
-            <div className="bg-base-200 py-16 md:px-64 px-8 min-h-screen">
-                <Link className='flex items-center font-semibold text-xl' to='/allToys'><FaArrowLeft className='mr-3'></FaArrowLeft> All Toys</Link>
+            <div className="bg-base-200 py-10 md:px-64 px-8 min-h-screen mt-16">
+                <Link className='mb-8 text-[#03BFA7] flex items-center font-semibold text-xl' to='/allToys'><FaArrowLeft className='mr-3'></FaArrowLeft> All Toys</Link>
 
                 <form onSubmit={handleAddToys}>
 

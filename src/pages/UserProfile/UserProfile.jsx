@@ -18,7 +18,7 @@ const UserProfile = () => {
 
     return (
         <div>
-            <div className='bg-base-200 min-h-screen py-10 px-56 '>
+            <div className='bg-base-200 min-h-screen py-10 px-56 mt-16'>
                 <div className='bg-white items-center justify-center p-8 rounded-xl flex gap-x-12'>
 
                     <img className='w-96 rounded-3xl' src={user?.photoURL} alt="" />
