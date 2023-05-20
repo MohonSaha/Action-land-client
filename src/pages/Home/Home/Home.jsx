@@ -9,7 +9,7 @@ import TitlePage from '../../Shared/TitlePage/TitlePage';
 
 const Home = () => {
     return (
-        <div>
+        <div className='mt-24'>
 
             <TitlePage title="Home"></TitlePage>
             <Banner></Banner>

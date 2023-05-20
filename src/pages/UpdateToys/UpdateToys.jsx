@@ -38,7 +38,7 @@ const UpdateToys = () => {
             console.log(data)
             if(data.modifiedCount > 0){
                 Swal.fire(
-                    'Update Successfully',
+                    'Updated Successfully',
                     'You have updated data successfully',
                     'success'
                   )

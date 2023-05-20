@@ -19,9 +19,11 @@ const UserProfile = () => {
     return (
         <div>
             <div className='bg-base-200 min-h-screen py-10 px-56 '>
-                <div className='bg-white p-8 rounded-xl flex gap-x-12'>
+                <div className='bg-white items-center justify-center p-8 rounded-xl flex gap-x-12'>
+
                     <img className='w-96 rounded-3xl' src={user?.photoURL} alt="" />
-                    <div className='space-y-3 py-20'>
+
+                    <div className='space-y-3'>
                         <h2 className='text-4xl'>{user?.displayName}</h2>
                         <h2 className='text-xl'>{user?.email}</h2>
                         <h2 className='flex items-center font-semibold'><FaCog></FaCog> <span className='ml-2'>Settings & Privacy</span></h2>

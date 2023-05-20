@@ -33,15 +33,21 @@ const Navbar = () => {
                     <li><Link to='/login'>Login</Link></li>
                 </>
         }
-
-
-
     </>
+
+    window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('navbar');
+        if (window.pageYOffset > 0) {
+            navbar.classList.add('shadow-2xl');
+        } else {
+            navbar.classList.remove('shadow-2xl');
+        }
+    });
 
 
     return (
         <div>
-            <div className="navbar h-18 mb-4 px-2 md:px-20 z-10 relative">
+            <div id="navbar" className="fixed  bg-white top-0 navbar h-18 mb-4 px-2 md:px-20 z-10 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -72,7 +78,7 @@ const Navbar = () => {
 
 
                         <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                            <Link to={user? `/user` : '/login'}>
+                            <Link to={user ? `/user` : '/login'}>
                                 <img className="h-11 w-11 rounded-full hover:scale-105 border-2 border-slate-500 border-dashed p-1 transition-all duration-700" src={user?.photoURL ? user?.photoURL : profile} alt="" />
                             </Link>
                         </div>

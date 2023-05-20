@@ -3,6 +3,8 @@ import { authContext } from '../../providers/AuthProviders';
 import ChildRow from './ChildRow';
 import Swal from 'sweetalert2';
 import TitlePage from '../Shared/TitlePage/TitlePage';
+import { Link } from 'react-router-dom';
+import { FaPlus } from 'react-icons/fa';
 
 const MyToys = () => {
 
@@ -68,6 +70,7 @@ const MyToys = () => {
         <div className='mt-16 md:mx-24'>
 
             <TitlePage title="Home | My Toy"></TitlePage>
+            
 
             <div className='mb-6 flex justify-between'>
                 <h2 className='text-2xl font-bold'>Total Listed Product: {myToys.length}</h2>
@@ -79,6 +82,14 @@ const MyToys = () => {
                     </ul>
                 </div>
             </div>
+
+
+            {
+                myToys.length == 0 && <div className='text-center'>
+                 <p className=' text-4xl font-semibold text-[#fa7092]'>No Added Toy Found</p>
+                    <p className='text-xl mt-2 font-semibold items-center text-[#03BFA7] '><Link to='/addToy'>Add Please +</Link></p>
+                 </div>
+            }
 
 
 
