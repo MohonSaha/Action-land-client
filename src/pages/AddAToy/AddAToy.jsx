@@ -30,7 +30,6 @@ const AddAToy = () => {
         const rating = form.rating.value;
 
         const newToys = { name, photo, details, sub_category, sName, sEmail, price, quantity, rating };
-        console.log(newToys);
 
         fetch('http://localhost:5000/addToys', {
             method: "POST",
