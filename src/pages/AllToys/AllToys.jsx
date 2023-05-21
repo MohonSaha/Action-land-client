@@ -8,6 +8,7 @@ const AllToys = () => {
 
     const { user } = useContext(authContext)
     const navigate = useNavigate()
+    const [toys, setToys] = useState([])
     const [searchText, setSearchText] = useState("");
 
     const handleViewDetails = (id) => {
@@ -22,7 +23,7 @@ const AllToys = () => {
     }
 
 
-    const [toys, setToys] = useState([])
+    
     useEffect(() => {
         fetch('https://zoo-land-server.vercel.app/showToys')
             .then(res => res.json())
@@ -30,14 +31,6 @@ const AllToys = () => {
                 setToys(data)
             })
     }, [])
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/jobSearchByName/${searchText}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setToys(data);
-    //         })
-    // }, [searchText])
 
 
     const handleSearch = () => {
