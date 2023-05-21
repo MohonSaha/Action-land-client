@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/images/Logos/action-logo.png'
 import { FaSearch, FaShoppingBag, FaUserCircle } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { authContext } from "../../../providers/AuthProviders";
 import profile from '../../../assets/images/Logos/profile-user.png'
 
@@ -9,6 +9,7 @@ import profile from '../../../assets/images/Logos/profile-user.png'
 const Navbar = () => {
 
     const { user, logOut } = useContext(authContext);
+    const [hide, setHide] = useState(false);
 
     const handleLogOut = () => {
         logOut()
@@ -16,21 +17,23 @@ const Navbar = () => {
             .catch(error => console.log(error))
     }
 
+    
+
 
     const navItems = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/allToys'>All Toys</Link></li>
+        <Link to='/'>Home</Link>
+        <Link to='/allToys'>All Toys</Link>
         {
             user ? <>
-                <li><Link to='/myToys'>My Toys</Link></li>
-                <li><Link to="/addToy">Add A Toy</Link></li>
-                <li><Link to='/blogs'>Blogs</Link></li>
-                <li><button onClick={handleLogOut}>Log out</button></li>
+                <Link to='/myToys'>My Toys</Link>
+                <Link to="/addToy">Add A Toy</Link>
+                <Link to='/blogs'>Blogs</Link>
+                <button onClick={handleLogOut}>Log out</button>
             </>
                 :
                 <>
-                    <li><Link to='/blogs'>Blogs</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
+                    <Link to='/blogs'>Blogs</Link>
+                    <Link to='/login'>Login</Link>
                 </>
         }
     </>
@@ -50,12 +53,15 @@ const Navbar = () => {
             <div id="navbar" className="fixed  bg-white top-0 navbar h-18 px-2 md:px-20 z-50">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn px-3 bg-white lg:hidden text-black border-white hover:text-[#03BFA7] hover:bg-white hover:border-white">
+                        <label onClick={() => setHide(false)} tabIndex={0} className="btn px-3 bg-white lg:hidden text-black border-white hover:text-[#03BFA7] hover:bg-white hover:border-white">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 20" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-32">
+                        <ul tabIndex={0} className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#d9fbf6] rounded-box w-44 ${hide ? 'hidden' : 'flex'}`}>
 
-                            {navItems}
+                            <li onClick={() => setHide(true)}>
+
+                                {navItems}
+                            </li>
 
                         </ul>
                     </div>
@@ -79,7 +85,7 @@ const Navbar = () => {
                     {
                         <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                             <Link to={user ? `/user` : '/login'}>
-                                <img className={`h-11 w-11 rounded-full hover:scale-105 border-2  border-dashed p-1 transition-all duration-700 ${user? 'border-[#03BFA7]' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                                <img className={`h-11 w-11 rounded-full hover:scale-105 border-2  border-dashed p-1 transition-all duration-700 ${user ? 'border-[#03BFA7]' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
                             </Link>
                         </div>
 
