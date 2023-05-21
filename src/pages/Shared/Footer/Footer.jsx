@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from '../../../assets/images/Logos/toy-store.png'
+import logo from '../../../assets/images/Logos/action-logo.png'
 import { FaFacebook, FaFacebookSquare, FaLinkedin, FaYoutubeSquare } from 'react-icons/fa';
 
 const Footer = () => {
     return (
         <div className='max-w-screen'>
-            <footer className="footer mt-16 bottom-0 p-10 md:p-10 bg-base-200 text-base-content">
+            <footer className="footer mt-16 bottom-0 p-10 md:p-10 bg-base-300 text-base-content">
                 <div>
                     <img className='w-20' src={logo} alt="" />
-                    <p className='text-xl font-semibold'>ZooLand</p>
-                    <p>Providing animal toys since 2018.</p>
-                    <p>© All right reserved by ZooLand 2023</p>
+                    <p className='text-xl font-semibold'>ActionLand</p>
+                    <p>Providing super hero toys since 2018.</p>
+                    <p>© All right reserved by ActionLand 2023</p>
                 </div>
                 <div>
                     <span className="footer-title">Office Address</span>

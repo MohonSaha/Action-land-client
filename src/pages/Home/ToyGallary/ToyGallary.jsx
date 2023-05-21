@@ -47,8 +47,6 @@ const ToyGallary = ({children}) => {
                     // install Swiper modules
                     modules={[Navigation, Pagination, A11y, Autoplay, Virtual]}
                     spaceBetween={50}
-                    // slidesPerView={3}
-                    // slidesPerView = {'auto'}
 
                     breakpoints={{
                         // when window width is >= 640px

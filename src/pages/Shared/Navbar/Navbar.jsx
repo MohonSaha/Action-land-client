@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../../../assets/images/Logos/toy-store.png'
+import logo from '../../../assets/images/Logos/action-logo.png'
 import { FaSearch, FaShoppingBag, FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import { authContext } from "../../../providers/AuthProviders";
@@ -47,11 +47,11 @@ const Navbar = () => {
 
     return (
         <div>
-            <div id="navbar" className="fixed  bg-white top-0 navbar h-18 px-5 md:px-20 z-50">
+            <div id="navbar" className="fixed  bg-white top-0 navbar h-18 px-2 md:px-20 z-50">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <label tabIndex={0} className="btn px-3 bg-white lg:hidden text-black border-white hover:text-[#03BFA7] hover:bg-white hover:border-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 20" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-32">
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/' className="flex items-center">
-                        <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-xl font-bold font-serif md:ml-4 ml-2"><span className="text-[#03BFA7]">Zoo</span><span className="text-[#fa7092]">Land</span></span>
+                        <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-xl font-bold font-serif md:ml-2 ml-1"><span className="text-[#03BFA7]">Action</span><span className="text-[#fa7092]">Land</span></span>
                     </Link>
                 </div>
                 <div className="navbar-center  hidden lg:flex">
@@ -79,7 +79,7 @@ const Navbar = () => {
                     {
                         <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                             <Link to={user ? `/user` : '/login'}>
-                                <img className="h-11 w-11 rounded-full hover:scale-105 border-2 border-slate-500 border-dashed p-1 transition-all duration-700" src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                                <img className={`h-11 w-11 rounded-full hover:scale-105 border-2  border-dashed p-1 transition-all duration-700 ${user? 'border-[#03BFA7]' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
                             </Link>
                         </div>
 

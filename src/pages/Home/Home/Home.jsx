@@ -16,8 +16,8 @@ const Home = () => {
             <TrendyCollection></TrendyCollection>
 
             <div className='relative text-center top-16 md:-top-[250px]'>
-                <h3 className='text-xl text-[#03BFA7] font-semibold'>Best Collection</h3>
-                <h1 className='md:text-5xl text-3xl font-bold'>Attractive Toys Gallary </h1>
+                <h3 className='text-xl text-[#03BFA7] font-semibold font-custom2 leading-tight'>Best Collection</h3>
+                <h1 className='md:text-5xl text-3xl font-bold font-custom2 leading-tight'>Attractive Toys Gallary </h1>
             </div>
 
 

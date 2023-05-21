@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik&display=swap');
 
 .custom-primary-btn {
     @apply bg-[#03BFA7] border-[#03BFA7] btn rounded-full hover:bg-[#fa7092] hover:border-[#fa7092] text-white font-bold py-2 transition-all duration-500 px-7
@@ -10,10 +11,6 @@
 .custom-secndary-btn{
     @apply hover:bg-[#fa7092] btn rounded-full border-[#fa7092] text-white font-bold py-2 transition-all duration-500 btn-outline px-7
 }
-
-/* .custom-cart-btn{
-    @apply hover:bg-[#fa7092] btn rounded-full border-[#fa7092] text-black font-bold py-2 transition-all duration-500 btn-outline px-7
-} */
 
 .custom-btn-outline{
     @apply border-2 border-[#03BFA7] border-dashed hover:text-white uppercase font-semibold hover:scale-x-105 hover:bg-[#03BFA7] text-black bg-none px-8 rounded-full transition-all duration-500
@@ -27,3 +24,5 @@
     background-color: #e10606 !important; /* Change this to your desired color */
     color: #000000; /* Change this to your desired text color */
   }
+
+

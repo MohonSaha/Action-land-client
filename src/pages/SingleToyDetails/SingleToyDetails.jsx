@@ -25,13 +25,9 @@ const SingleToyDetails = () => {
 
 
     const myStyles = {
-        itemShapes: Star,
-      
-        activeFillColor: ['#fa7092', '#fa7092', '#fa7092', '#fa7092', '#fa7092'],
-      
+        itemShapes: Star,    
+        activeFillColor: ['#fa7092', '#fa7092', '#fa7092', '#fa7092', '#fa7092'],     
         inactiveFillColor: '#f9c4d1',
-        // stroke: "2"
-        inactiveStrokeColor: '#115147'
         
       }
 
