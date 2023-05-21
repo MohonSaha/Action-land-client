@@ -1,7 +1,7 @@
 import React from 'react';
-import banner from '../../../assets/images/banars/why-choose-banner.jpg'
-import img1 from '../../../assets/images/banars/side-img.jpg'
-import img2 from '../../../assets/images/banars/side-img-2.jpg'
+import banner from '../../../assets/images/Super-banner/why-choose.jpg'
+import img1 from '../../../assets/images/Super-banner/w-1.jpg'
+import img2 from '../../../assets/images/Super-banner/w-2.jpg'
 import { FaCubes, FaHandHoldingMedical, FaUsers } from 'react-icons/fa';
 
 const WhyChoose = () => {
@@ -19,13 +19,14 @@ const WhyChoose = () => {
                             <FaCubes className='text-white text-4xl'></FaCubes> <h3 className='text-2xl text-white ml-4 font-semibold'>
                                 Highly Good Product</h3>
                         </div>
-                        <p className='font-semibold text-slate-300 ml-14'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse illum ex soluta ipsum distinctio saepe?</p>
+                        <p className='font-semibold text-slate-300 ml-14'>Introducing our sensational action hero toy products! Designed to ignite imagination and inspire thrilling adventures, these toys bring out the hero in every child.</p>
 
                         <div className='mt-6 flex'>
                             <FaHandHoldingMedical className='text-white text-4xl'></FaHandHoldingMedical> <h3 className='text-2xl text-white ml-4 font-semibold'>
-                            Quality Control System</h3>
+                                Quality Control System</h3>
                         </div>
-                        <p className='font-semibold text-slate-300 ml-14'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse illum ex soluta ipsum distinctio saepe?</p>
+                        <p className='font-semibold text-slate-300 ml-14'>
+                            At Action Land, we prioritize quality control. Our stringent system ensures that every toy undergoes rigorous testing, guaranteeing superior craftsmanship, safety, and durability.</p>
 
 
                     </div>
