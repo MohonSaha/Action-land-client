@@ -49,7 +49,7 @@ const SignUp = () => {
                 navigate('/login')
             })
             .catch(error => {
-                console.log(error);
+                setError(error);
             })
 
 
@@ -65,7 +65,7 @@ const SignUp = () => {
 
 
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen mt-20">
             <TitlePage title="Home | Sign Up"></TitlePage>
 
 

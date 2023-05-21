@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className='md:mt-24 mt-16'>
 
-            <TitlePage title="Home"></TitlePage>
+            <TitlePage title=" Action Land | Home"></TitlePage>
             <Banner></Banner>
             <TrendyCollection></TrendyCollection>
 

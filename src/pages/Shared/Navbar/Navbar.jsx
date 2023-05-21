@@ -86,8 +86,22 @@ const Navbar = () => {
 
                     {
                         <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                            {/* <Link to={user ? `/user` : '/login'}>
+                                <img className={`h-11 w-11 rounded-full hover:scale-105 border-2  border-dashed p-1 transition-all duration-700 ${user ? 'border-[#03BFA7] animate-spin' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                            </Link> */}
+
+
+
+
                             <Link to={user ? `/user` : '/login'}>
-                                <img className={`h-11 w-11 rounded-full hover:scale-105 border-2  border-dashed p-1 transition-all duration-700 ${user ? 'border-[#03BFA7]' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                                <div className="relative">
+                                    <img className={`h-11 w-11 rounded-full hover:scale-105 p-1 transition-all duration-700 ${user ? 'border-[#03BFA7]' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
+                                    {user ? (
+                                        <div className="absolute inset-0 rounded-full border-2 border-[#03BFA7] border-dashed animate-spin" style={{ animationDuration: '15s' }}></div>
+                                    ) : (
+                                        <div className="absolute inset-0 rounded-full border-2 border-dashed border-slate-500"></div>
+                                    )}
+                                </div>
                             </Link>
                         </div>
 

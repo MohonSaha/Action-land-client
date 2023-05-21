@@ -19,7 +19,7 @@ const Banner = () => {
                             <h2 className='text-5xl md:text-6xl font-custom2 font-bold mb-5'>Kids Toys </h2>
                             <h2 className='text-5xl md:text-6xl font-custom2 font-bold mb-10 mt-0'>Up To 20% Off</h2>
                             <div>
-                                <button class="custom-primary-btn">
+                                <button className="custom-primary-btn">
                                     <Link to='/allToys'>Shop Now</Link><FaPlus className='ml-3'></FaPlus> </button>
 
                             </div>

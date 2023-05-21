@@ -6,7 +6,6 @@ import { Rating, Star } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
 
 const CategoryToyCard = ({ toy }) => {
-    console.log(toy);
 
     const { name, photo, price, details, quantity, rating, _id } = toy;
     const { user } = useContext(authContext)

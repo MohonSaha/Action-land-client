@@ -34,7 +34,6 @@ const ToyGallary = ({children}) => {
         })
     } ,[])
 
-    console.log(heros);
 
 
 
