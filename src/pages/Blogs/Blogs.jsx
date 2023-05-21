@@ -10,6 +10,51 @@ const Blogs = () => {
                 <p>
                     <strong>2. Refresh token</strong> is a credential that is also issued to a user during the authentication process, along with the access token. Unlike access tokens, refresh tokens have a longer lifespan and are used to obtain new access tokens without requiring the user to re-authenticate. When an access token expires, the client application can send the refresh token to the authorization server to obtain a new access token.
                 </p>
+
+
+                <div className='mt-8'>
+                    <strong>Store in client side:</strong>
+                    <ol className='list-decimal ml-6 font-semibold'>
+                        <li>Access Token:</li>
+                        <ul className='list-disc ml-6'>
+                            <li>Local Storage</li>
+                            <li>HTTP-only Cookie</li>
+                        </ul>
+                        <li>Refresh Token:</li>
+                        <ul className='list-disc ml-6'>
+                            <li>Secure Storage Mechanism</li>
+                            <li>HTTP-only Cookie</li>
+                        </ul>
+                    </ol>
+                </div>
+
+                <div className='mt-6 w-full md:w-2/3 justify-between flex flex-col md:flex-row '>
+                    <div>
+                        <strong>Access Token Workflow:</strong>
+                        <ol className='list-decimal ml-6'>
+                            <li>Authentication</li>
+                            <li>Token Issuance</li>
+                            <li>Token Usage</li>
+                            <li>Token Validation</li>
+                            <li>Resource Access</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <strong>Refresh Token Workflow:</strong>
+                        <ol className='list-decimal ml-6'>
+                            <li>Token Issuance</li>
+                            <li>Token Storage</li>
+                            <li>Token Refresh</li>
+                            <li>Token Validation</li>
+                            <li>Token Renewal</li>
+                            <li>Access Renewal</li>
+                            <li>Repeat Process</li>
+                        </ol>
+                    </div>
+                </div>
+
+
             </div>
 
 
@@ -35,7 +80,7 @@ const Blogs = () => {
                                 </tr>
 
 
-                                
+
                                 <tr className="bg-white text-center">
                                     <td className="py-3 px-4 font-semibold">Schema</td>
                                     <td className="py-3 px-4">SQL databases enforce a rigid schema, which means the structure and types of data must be defined before inserting data.</td>
