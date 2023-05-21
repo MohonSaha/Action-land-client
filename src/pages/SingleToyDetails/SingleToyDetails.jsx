@@ -3,6 +3,8 @@ import { FaCcPaypal, FaCcVisa, FaHeart, FaMoneyBillAlt, FaRegClock, FaShare, FaS
 import { useParams, useSearchParams } from 'react-router-dom';
 import { authContext } from '../../providers/AuthProviders';
 import TitlePage from '../Shared/TitlePage/TitlePage';
+import { Rating, Star } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const SingleToyDetails = () => {
 
@@ -21,9 +23,21 @@ const SingleToyDetails = () => {
 
     const { name, photo, rating, price, quantity, details, sName,sEmail } = toyDetails;
 
+
+    const myStyles = {
+        itemShapes: Star,
+      
+        activeFillColor: ['#fa7092', '#fa7092', '#fa7092', '#fa7092', '#fa7092'],
+      
+        inactiveFillColor: '#f9c4d1',
+        // stroke: "2"
+        inactiveStrokeColor: '#115147'
+        
+      }
+
     return (
         <div className='bg-base-300 min-h-screen -mb-20 py-10 mt-16'>
-
+<p className='text-[#fad4dd]'></p>
             <TitlePage title="Home | Toy Details"></TitlePage>
 
             <div className='grid md:grid-cols-3 bg-white md:mx-12 p-10 rounded-lg h-fit gap-x-6'>
@@ -34,7 +48,12 @@ const SingleToyDetails = () => {
                     <div>
                         <h1 className='text-4xl font-semibold text-[#029a86]'>{name}</h1>
                         <div className='flex items-center mt-2 w-full'>
-                            <h2 className='flex-grow text-lg font-semibold'>Rating: {rating}</h2>
+                        <div className='flex items-center mt-1'>
+                                <Rating style={{ maxWidth: 100}} value={rating} readOnly itemStyles={myStyles}/>
+                                <span className='ms-2 mb-0 font-semibold'>({rating})</span>
+                            </div>
+
+
                             <div className='flex  ml-12 flex-grow'>
                                 <FaShareAlt className='text-2xl'></FaShareAlt>
                                 <FaHeart className='ml-3 text-2xl'></FaHeart>

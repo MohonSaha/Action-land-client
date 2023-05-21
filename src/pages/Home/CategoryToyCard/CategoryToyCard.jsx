@@ -2,6 +2,8 @@ import React, { useCallback, useContext } from 'react';
 import { authContext } from '../../../providers/AuthProviders';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Rating, Star } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
 
 const CategoryToyCard = ({ toy }) => {
     console.log(toy);
@@ -23,6 +25,13 @@ const CategoryToyCard = ({ toy }) => {
         navigate(`/toyDetails/${toy._id}`)
     }
 
+    const myStyles = {
+        itemShapes: Star,
+        activeFillColor: ['#fa7092', '#fa7092', '#fa7092', '#fa7092', '#fa7092'],
+        inactiveFillColor: '#f9c4d1',
+
+    }
+
 
 
     return (
@@ -35,7 +44,15 @@ const CategoryToyCard = ({ toy }) => {
 
                     <span className='md:-mt-12'>
                         <p className='text-2xl '>Price: <span className='text-[#fa7092] font-semibold'> ${price}</span></p>
-                        <p>Rating: {rating}</p>
+
+                        <div className='flex items-center mt-1'>
+                            <Rating style={{ maxWidth: 100 }} value={rating} readOnly itemStyles={myStyles} />
+                            <span className='ms-2 mb-0 font-semibold'>({rating})</span>
+                        </div>
+
+
+
+
                     </span>
 
                     <div className="card-actions justify-end">
