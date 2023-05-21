@@ -32,9 +32,13 @@ const ChildRow = ({ toy, handleDelete, handleUpdateToys }) => {
             <td>
                 <p className='text-lg font-semibold'>${price}</p>
             </td>
-            <th>
-                <button onClick={()=> handleUpdateToys(_id)} className="btn btn-sm bg-[#03BFA7] border-[#03BFA7] hover:bg-[#fa7092] hover:border-[#fa7092]  text-white"><Link to={`/myToys/update/${_id}`}>Update</Link></button>
+            <th className='text-center'>
+                <button className="btn btn-sm bg-[#03BFA7] border-[#03BFA7] hover:bg-[#fa7092] hover:border-[#fa7092]  text-white"><Link to={`/toyDetails/${_id}`}>See Details</Link></button>
+
+                <button onClick={()=> handleUpdateToys(_id)} className="btn btn-sm bg-[#03BFA7] border-[#03BFA7] hover:bg-[#fa7092] hover:border-[#fa7092] ml-6 text-white"><Link to={`/myToys/update/${_id}`}>Update</Link></button>
             </th>
+
+
         </tr>
     );
 };
