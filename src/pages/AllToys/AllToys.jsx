@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { authContext } from '../../providers/AuthProviders';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, json, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import TitlePage from '../Shared/TitlePage/TitlePage';
 
@@ -8,7 +8,7 @@ const AllToys = () => {
 
     const { user } = useContext(authContext)
     const navigate = useNavigate()
-
+    const [searchText, setSearchText] = useState("");
 
     const handleViewDetails = (id) => {
         if (!user) {
@@ -31,12 +31,27 @@ const AllToys = () => {
             })
     }, [])
 
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/jobSearchByName/${searchText}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setToys(data);
+    //         })
+    // }, [searchText])
+
+
+    const handleSearch = () => {
+        fetch(`http://localhost:5000/jobSearchByName/${searchText}`)
+            .then(res => res.json())
+            .then(data => {
+                setToys(data);
+            })
+    }
 
 
     return (
         <div className='mt-28 md:mx-24'>
             <TitlePage title="Home | All Toys"></TitlePage>
-
 
 
             <div className='text-center mb-6'>
@@ -47,8 +62,8 @@ const AllToys = () => {
 
             <div className="form-control mb-8 w-full  ">
                 <label className="input-group flex justify-center">
-                    <input type="text" placeholder="Search toys by name" className="input input-bordered w-2/3 font-semibold" />
-                    <span className='custom-primary-btn'>Search</span>
+                    <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search toys by name" className="input input-bordered w-2/3 font-semibold" />
+                    <span onClick={handleSearch} className='custom-primary-btn'>Search</span>
                 </label>
             </div>
 
