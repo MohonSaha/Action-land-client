@@ -1,8 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik&display=swap'); */
+
 
 .custom-primary-btn {
     @apply bg-[#03BFA7] border-[#03BFA7] btn rounded-full hover:bg-[#fa7092] hover:border-[#fa7092] text-white font-bold py-2 transition-all duration-500 px-7

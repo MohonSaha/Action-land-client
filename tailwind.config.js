@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         custom: ['Rubik', 'sans-serif'],
-        custom2: ['Pacifico', 'cursive'],
+        custom2: ['Ubuntu', 'sans-serif'],
       }
     },
   },

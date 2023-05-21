@@ -3,7 +3,7 @@ import React from 'react';
 const ToyImage = ({hero}) => {
    
     
-    console.log(hero);
+
     return (
         <div>
             <div>

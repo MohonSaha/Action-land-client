@@ -17,7 +17,7 @@ const Navbar = () => {
             .catch(error => console.log(error))
     }
 
-    
+
 
 
     const navItems = <>
@@ -66,13 +66,15 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/' className="flex items-center">
-                        <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-xl font-bold font-serif md:ml-2 ml-1"><span className="text-[#03BFA7]">Action</span><span className="text-[#fa7092]">Land</span></span>
+                        <img src={logo} className="md:w-12 w-8" alt="" /> <span className="md:text-3xl text-2xl md:ml-2 ml-1 font-custom2"><span className="text-[#03BFA7]">Action</span><span className="text-[#fa7092]">Land</span></span>
                     </Link>
                 </div>
                 <div className="navbar-center  hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-lg font-semibold">
+                    <ul className="menu menu-horizontal px-1 text-lg font-semibold ">
 
-                        {navItems}
+                        <li>
+                            {navItems}
+                        </li>
 
                     </ul>
                 </div>
