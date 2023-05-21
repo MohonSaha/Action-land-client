@@ -9,7 +9,7 @@ const WhyChoose = () => {
         <div className=' mt-24'>
             <div className='relative'>
                 <img className='md:h-screen h-[900px] w-full' src={banner} alt="" />
-                <div className='absolute flex flex-col md:flex-row pt-4 md:pt-20 left-0 top-0 bg-gradient-to-r from-[#0e1110ca] to-[#069e8a79] h-full w-full md:px-24 px-4 md:space-x-8 space-y-10 md:space-y-0'>
+                <div className='absolute flex flex-col md:flex-row md:pt-20 left-0 top-0 bg-gradient-to-r from-[#0e1110ca] to-[#069e8a79] h-full w-full md:px-24 px-4 md:space-x-8 space-y-5 md:space-y-0'>
 
                     <div className='mt-6 md:w-1/2'>
                         <h1 className='font-bold md:text-6xl text-3xl text-white font-custom2 leading-tight'>Why Choose Action Land?</h1>
