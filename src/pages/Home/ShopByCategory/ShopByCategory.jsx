@@ -84,10 +84,9 @@ const ShopByCategory = () => {
                             }
                         </div>
                     </TabPanel>
+                    <TabPanel className="mt-12 mx-0">
 
-                    <TabPanel>
-
-                        <div className="flex gap-6 md:flex-row flex-col">
+                        <div className="flex gap-6 mx-6 md:flex-row flex-col">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}
@@ -96,10 +95,9 @@ const ShopByCategory = () => {
                             }
                         </div>
                     </TabPanel>
+                    <TabPanel className="mt-12 mx-0">
 
-                    <TabPanel>
-
-                        <div className="flex gap-6 md:flex-row flex-col">
+                        <div className="flex gap-6 mx-6 md:flex-row flex-col">
                             {
                                 toys.map(toy => <CategoryToyCard
                                     toy={toy}

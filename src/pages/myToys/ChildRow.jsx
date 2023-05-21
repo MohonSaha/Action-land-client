@@ -8,11 +8,11 @@ const ChildRow = ({ toy, handleDelete, handleUpdateToys }) => {
 
     return (
         <tr className='border-2 border-base-300'>
-            <th>
+            <td>
                 <button onClick={()=> handleDelete(_id)} className="btn btn-circle bg-[#03BFA7] border-[#03BFA7] hover:bg-[#fa7092] hover:border-[#fa7092]  text-white">
                     X
                 </button>
-            </th>
+            </td>
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">

@@ -34,20 +34,28 @@ const AllToys = () => {
 
 
     return (
-        <div>
+        <div className='mt-28 md:mx-24'>
             <TitlePage title="Home | All Toys"></TitlePage>
 
-            <div className="overflow-x-auto mt-28 md:mx-24">
-                <div className='text-center mb-8'>
-                    <h3 className='text-xl text-[#03BFA7] font-semibold'>All Toys</h3>
-                    <h1 className='text-5xl font-bold'>Total Posted Toys</h1>
-                </div>
 
 
+            <div className='text-center mb-6'>
+                <h3 className='text-xl text-[#03BFA7] font-semibold'>All Toys</h3>
+                <h1 className='text-5xl font-bold'>Total Posted Toys</h1>
+            </div>
 
 
+            <div className="form-control mb-8 w-full  ">
+                <label className="input-group flex justify-center">
+                    <input type="text" placeholder="Search toys by name" className="input input-bordered w-2/3 font-semibold" />
+                    <span className='custom-primary-btn'>Search</span>
+                </label>
+            </div>
 
-                <table className="table w-full  my-table">
+
+            <div className="overflow-x-auto ">
+
+                <table className="table w-full my-table">
                     {/* head */}
                     <thead>
                         <tr>
@@ -64,7 +72,7 @@ const AllToys = () => {
                         toys.map(toy =>
                             <tbody key={toy._id}>
                                 <tr>
-                                    <td>
+                                    <th>
                                         <div className="flex items-center space-x-2">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-24 h-24">
@@ -72,7 +80,7 @@ const AllToys = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </td>
+                                    </th>
                                     <td>
 
                                         <div>
@@ -81,7 +89,7 @@ const AllToys = () => {
                                             <div className="text-sm opacity-80">Quantity: {toy.quantity}</div>
                                         </div>
                                     </td>
-                                    <td>${toy.price}</td>
+                                    <td className='text-lg font-semibold'>${toy.price}</td>
                                     <td>{toy.sName ? toy.sName : <span className='text-slate-500'>Not Found</span>}</td>
                                     <td>
                                         <button onClick={() => handleViewDetails(toy._id)} className="btn bg-white border-white hover:bg-[#03BFA7] hover:text-white hover:border-[#03BFA7] transition-all duration-500 btn-sm text-[#03BFA7] ">View Details</button>
