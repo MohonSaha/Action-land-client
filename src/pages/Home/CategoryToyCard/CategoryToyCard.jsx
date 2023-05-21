@@ -42,7 +42,7 @@ const CategoryToyCard = ({ toy }) => {
                     <h2 className="card-title text-[#03BFA7]"> {name.length < 20 ? name : name.slice(0, 20) + '...'}</h2>
 
                     <span className='md:-mt-12'>
-                        <p className='text-2xl '>Price: <span className='text-[#fa7092] font-semibold'> ${price}</span></p>
+                        <p className='text-xl font-semibold'>Price: <span className='text-[#fa7092] font-semibold'> ${price}</span></p>
 
                         <div className='flex items-center mt-1'>
                             <Rating style={{ maxWidth: 100 }} value={rating} readOnly itemStyles={myStyles} />

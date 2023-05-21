@@ -70,7 +70,7 @@ const SignUp = () => {
 
 
             <div className="hero-content flex-col lg:flex-row ">
-                <div className="text-center lg:text-left w-1/2 mr-32">
+                <div className="text-center lg:text-left w-full md:w-1/2 md:mr-32">
                     <img src={logo} alt="" />
                 </div>
 

@@ -69,9 +69,9 @@ const Login = () => {
             <TitlePage title="Home | Log In"></TitlePage>
 
 
-            <div className="hero-content flex-col lg:flex-row ">
-                <div className="text-center lg:text-left w-1/2 mr-32">
-                    <img src={img} alt="" />
+            <div className="hero-content flex-col lg:flex-row justify-center items-center">
+                <div className="text-center lg:text-left w-full md:w-1/2 md:mr-32">
+                    <img className='w-full' src={img} alt="" />
                 </div>
 
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-black border-2">
