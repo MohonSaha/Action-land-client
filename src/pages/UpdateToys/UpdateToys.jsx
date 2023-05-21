@@ -88,7 +88,7 @@ const UpdateToys = () => {
                     </div>
 
 
-                    <input type="submit" className="btn w-full bg-[#0a9b87] border-[#0a9b87] hover:bg-[#067c6c] hover:border-[#067c6c] text-white mt-10" value="Save" />
+                    <input type="submit" className="btn w-full bg-[#0a9b87] border-[#0a9b87] hover:bg-[#067c6c] hover:border-[#067c6c] text-white mt-10" value="Update" />
                 </form>
             </div >
         </div>
