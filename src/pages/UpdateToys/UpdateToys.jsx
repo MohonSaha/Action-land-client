@@ -35,7 +35,6 @@ const UpdateToys = () => {
         })
         .then(res => res.json())
         .then(data =>{
-            console.log(data)
             if(data.modifiedCount > 0){
                 Swal.fire(
                     'Updated Successfully',
@@ -51,8 +50,8 @@ const UpdateToys = () => {
     }
 
     return (
-        <div>
-            <div className="bg-base-200 mt-20 py-16 md:px-64 px-8 min-h-screen">
+        <div className='-mb-20'>
+            <div className="bg-base-200 mt-20 pt-16 pb-44 md:px-64 px-8 min-h-screen">
                 <Link className='flex items-center font-semibold text-xl' to='/allToys'><FaArrowLeft className='mr-3'></FaArrowLeft> All Toys</Link>
 
                 <form onSubmit={handleUpdateToys}>

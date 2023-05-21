@@ -33,7 +33,7 @@ const ShopByCategory = () => {
     return (
 
 
-        <div className='md:-mt-12 mt-16 '>
+        <div className='md:-mt-36 mt-16 '>
             <div className='mb-6 text-center '>
                 <h3 className='text-xl text-[#03BFA7] font-semibold font-custom2 leading-tight'> Shop By Category</h3 >
                 <h1 className='text-5xl font-bold font-custom2 leading-tight'>Trending Toy Categoryes</h1>
