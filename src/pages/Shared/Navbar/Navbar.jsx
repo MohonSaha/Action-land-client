@@ -85,10 +85,7 @@ const Navbar = () => {
 
 
                     {
-                        <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                            {/* <Link to={user ? `/user` : '/login'}>
-                                <img className={`h-11 w-11 rounded-full hover:scale-105 border-2  border-dashed p-1 transition-all duration-700 ${user ? 'border-[#03BFA7] animate-spin' : 'border-slate-500'}`} src={user?.photoURL ? user?.photoURL : profile} alt="" />
-                            </Link> */}
+                        <div className="tooltip tooltip-left" data-tip={user?.displayName}>
 
 
 
