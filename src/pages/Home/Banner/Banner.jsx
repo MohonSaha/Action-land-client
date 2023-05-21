@@ -54,7 +54,7 @@ const Banner = () => {
                     </div>
 
 
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:top-1/2 top-2/3">
                         <a href="#slide1" className="btn btn-circle text-slate-600 bg-[#fff] border-[#fff]">❮</a>
                         <a href="#slide3" className="btn btn-circle text-slate-600 bg-[#fff] border-[#fff]">❯</a>
                     </div>
@@ -84,7 +84,7 @@ const Banner = () => {
 
 
 
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:top-1/2 top-2/3">
                         <a href="#slide2" className="btn btn-circle text-slate-600 bg-[#fff] border-[#fff]">❮</a>
                         <a href="#slide4" className="btn btn-circle text-slate-600 bg-[#fff] border-[#fff]">❯</a>
                     </div>
