@@ -34,7 +34,7 @@ const AllToys = () => {
 
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/jobSearchByName/${searchText}`)
+        fetch(`https://zoo-land-server.vercel.app/jobSearchByName/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);

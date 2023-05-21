@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../../assets/images/banars/cartoon.jpg'
+import image from '../../../assets/images/Super-banner/subscribe-img.png'
 
 const Subscribe = () => {
     return (
